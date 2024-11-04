@@ -12,11 +12,11 @@
   <DataSourceViews />
   <DeploymentModelSpecificContent>
     <Manifest>
-      <SSIS:Project SSIS:ProtectionLevel="EncryptSensitiveWithUserKey" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
+      <SSIS:Project SSIS:ProtectionLevel="DontSaveSensitive" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
         <SSIS:Properties>
           <SSIS:Property SSIS:Name="ID">{babe0d7f-d633-4503-ad15-be807d655345}</SSIS:Property>
           <SSIS:Property SSIS:Name="Name">RAMCO_ETL_StateLicense</SSIS:Property>
-          <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionMajor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionComments">
@@ -26,7 +26,6 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">COWRAMCOSQL</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmMDM6mTb20Sn+XhEPCYEWQAAAAACAAAAAAAQZgAAAAEAACAAAADqPnUN/VBFmp9H5O+Azr3noQeq0+h0tT4jjkdY2FogvAAAAAAOgAAAAAIAACAAAABDoBkG6oxF+EqF5iFvChvYN5zGOIHGOO0J3YaLbQXO/ZAAAADuT9oVYMojXn6LHvuC65XfjiILcFPUDd/hhSYTFkFiqMQSG8a/NsL+Jy3LJsMziIVInTOZpZTQ6NBl1OqNnursVetxx0bTgDeAloxSmm3siZ8wncN5s41NI3wZ4uM9H1xH5jyFZg612Lp9iJBMguKgo+Yo4lMRSzU7OeVbWbX2cVCiIEtYOtdjBaCF/uBvP61AAAAAsxKydOcf+UNTVARbyg5YD2B1mhZYB97VBYoFBeiWo3Q5bleZjD+oSHvBtrCkmRdwkhr28RZxxms15DqmR7bq3Q==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
