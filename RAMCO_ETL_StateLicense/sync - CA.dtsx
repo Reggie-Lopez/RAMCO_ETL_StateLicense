@@ -11,8 +11,9 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="sync - CA"
   DTS:PackageType="5"
-  DTS:VersionBuild="113"
-  DTS:VersionGUID="{DDC984A2-E7E1-4365-A7F8-F3003F886DF1}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="115"
+  DTS:VersionGUID="{F7294F2C-4E0D-4665-A1D2-577E6693D1BD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -39,8 +40,7 @@
           ConnectionString="AuthenticationType=Federation;ServiceEndpoint=Soap2011;UserName=reggie.lopez@ramco.ams;Domain=;ServerUrl=https://bhglaarcrm.ramcoams.org;ProxyUsername=;ProxyMode=NoProxy;ProxyServer=;ProxyServerPort=0;BypassProxyOnLocal=False;HomeRealmUri=;ApiVersion=;ServiceTimeout=120;RetryOnIntermittentErrors=True;IgnoreCertificateErrors=False;TimezoneConversionEngine=Auto"
           ConnectByProxy="False">
           <Password
-            Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmMDM6mTb20Sn+XhEPCYEWQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABpvVvFGMkAUWT4BAR3ODtuR9p4sv4LyUdvUhVp86WEYQAAAAAOgAAAAAIAACAAAABJpzASS1RsmZptbGeDMa2nhRVMzLwoRY8mlzFmt7/GtSAAAAC+o3lVEokClsUhdpUIJKmsd1PTigXPN88HMzEANLrrIUAAAABAmfxvTB1DyyNrGDWcountvVLntZZK1zVqDt1Ds5Sf9ioaQp/rdN6XImZRSiHd92xcSFqv/G+gZ/sif2wffKAA</Password>
+            Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"></Password>
         </CrmConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>

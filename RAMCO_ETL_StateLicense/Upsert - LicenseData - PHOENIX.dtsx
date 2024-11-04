@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="11/26/2019 12:08:34 PM"
@@ -7,12 +7,13 @@
   DTS:CreatorName="NARINTERNAL\RLopez"
   DTS:DTSID="{E40B723C-E1EC-4FE8-82DA-0366AD27C30E}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5223.0"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="Upsert - LicenseData - PHOENIX"
   DTS:PackageType="5"
-  DTS:VersionBuild="118"
-  DTS:VersionGUID="{7F5AE992-7F45-48BD-BE3B-31FA372FBAC1}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="120"
+  DTS:VersionGUID="{A841956C-EB06-4E68-97EE-35437F41B7BC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -16103,19 +16104,19 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="232.8,41.6"
+          Size="233,42"
           Id="Package\Associate - Entities to Accounts"
           TopLeft="690.5,267.55555976563" />
         <NodeLayout
-          Size="270.4,41.6"
+          Size="270,42"
           Id="Package\Associate - Individuals to Memberships"
           TopLeft="666.5,577.5" />
         <NodeLayout
-          Size="156.8,41.6"
+          Size="157,42"
           Id="Package\Upsert - Entities"
           TopLeft="729.99999627471,123.5" />
         <NodeLayout
-          Size="172.8,41.6"
+          Size="173,42"
           Id="Package\Upsert - Individuals"
           TopLeft="717.99999627471,436.44444023437" />
         <EdgeLayout

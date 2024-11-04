@@ -11,8 +11,9 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Upsert - LicenseData - AAR"
   DTS:PackageType="5"
-  DTS:VersionBuild="157"
-  DTS:VersionGUID="{DAC21189-6BA7-4C92-BE2E-0584ECC83C6E}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="158"
+  DTS:VersionGUID="{AF4F8BB8-3220-4C28-9952-1C7A3118CA5D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1025,8 +1026,7 @@
           ConnectionString="DeploymentType=Crm2011;ServerHost=https://aarcrm.ramcoams.org/;ServerUser=reggie.lopez@ramco.ams;OrganizationName=AARCRM (AARCRM);ServerTimeout=100;RetainSameConnection=True;Compression=False;ConnectionSharing=False;CallerId=;OrganizationUrl=;ProxyHost=;ProxyPort=0;ProxyUser=;"
           ConnectByProxy="False">
           <ServerPassword
-            Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmMDM6mTb20Sn+XhEPCYEWQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADQqWx1qMXHWtDIgTxF23oFvV3E7sYnDSgMFWpRzLRCtQAAAAAOgAAAAAIAACAAAAD17JF5ve4qzjfAyVtE3cwR3TGUC7aQ9m9bwFMJlAYkMyAAAAAbe60kk96a4E0q2viqfe1kLh9h1s7hD+3kDKfQgwqr+0AAAAAPaWp+k/vveN2qCqy3AJ0PxIeJnVvjc9e/QKB57NWf2GgfcNaef9SoDY5VL7nIVqF/Xm2jc+Nm+80HmKdCtADv</ServerPassword>
+            Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"></ServerPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
