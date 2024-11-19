@@ -5,15 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="HOME-BASE"
   DTS:CreatorName="HOME-BASE\Lopez"
-  DTS:DTSID="{9310A28C-F1F8-4121-8B17-5164DCDDDF9A}"
+  DTS:DTSID="{A24BCCB5-DAD7-485B-A7A5-682A8E08156B}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5556.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="sync - AZ"
   DTS:PackageType="5"
-  DTS:ProtectionLevel="2"
-  DTS:VersionBuild="35"
-  DTS:VersionGUID="{272D0850-D77E-46DE-BAB6-21D71CBE1253}">
+  DTS:VersionBuild="44"
+  DTS:VersionGUID="{ED7409B9-1ED4-435E-AFB4-AF9DC573204B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -201,36 +200,17 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Package Connection Manager 1]"
-      DTS:CreationName="PACKAGE"
-      DTS:DTSID="{464E213E-5F41-4D2A-B9C6-1B0C4C3EA1B7}"
-      DTS:ObjectName="Package Connection Manager 1">
-      <DTS:ObjectData>
-        <ConnectionManager
-          RetainSameConnection="True"
-          ConnectionString="Location=Current;ServerName=;ServerUser=;PackagePath=;"
-          ConnectByProxy="False" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[RAMCO]"
       DTS:CreationName="DYNAMICS-CRM"
-      DTS:DTSID="{7BF683CE-9792-43BF-B3BD-F3A9DE70EC4C}"
+      DTS:DTSID="{20F41B89-4C19-45FA-957B-357A8B74ABF9}"
       DTS:ObjectName="RAMCO">
       <DTS:ObjectData>
         <ConnectionManager
           ConnectionString="DeploymentType=Crm2011;ServerHost=https://aarcrm.ramcoams.org/;ServerUser=reggie.lopez@ramco.ams;OrganizationName=AARCRM (AARCRM);ServerTimeout=100;RetainSameConnection=True;Compression=False;ConnectionSharing=False;CallerId=;OrganizationUrl=;ProxyHost=;ProxyPort=0;ProxyUser=;"
           ConnectByProxy="False">
-          <EncryptedData
-            Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="zZPoNTGW4ks="
-            IV="cSlR3aCc/r6RFFRCd0i5KQ==" xmlns="http://www.w3.org/2001/04/xmlenc#">
-            <EncryptionMethod
-              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
-            <CipherData>
-              <CipherValue>cSlR3aCc/r6RFFRCd0i5Ka6IG9BLsmiWaTUn6AO9tQyAYiaH0Vzm67LF96OGDY6lLn/tppZ6GxL62tw9+IgjGlcrfpMNUumEtMzo4Ux5mIUe49pSlZ28qsinTUYccSL4+EV1smU5/OmY7otjYhjTpgMjK4JpfqmuOThlaRhQEf8=</CipherValue>
-            </CipherData>
-          </EncryptedData>
+          <ServerPassword
+            Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmMDM6mTb20Sn+XhEPCYEWQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAFvpYASocH4s0MJOgtoIlmgJ9sxv9fbYrfRDLB7jXcbwAAAAAOgAAAAAIAACAAAAB502FwYCNdKppBIIAOcGv/laOG+l1TH0vflqlf4B6RACAAAAANxmxpdRLGeFg1gKRW4lMqrXYcyj5iVh6b1HFIer44sUAAAACWVzJKDL/VQQdmCn4E/N4n4F+swXTyUFup9QY28JsLMw8d/TQSjcH0bQxMi1FJK6gSGIqkEKiGEmggZi6UXWTf</ServerPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -319,7 +299,7 @@
                     <property
                       dataType="System.Int32"
                       description="Specifies the number of rows to be sent as a batch to the service."
-                      name="BatchSize">200</property>
+                      name="BatchSize">100</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies how to handle multiple match records."
@@ -2454,14 +2434,35 @@
           Language="CSharp"
           ReadOnlyVariables="$Project::filePath_Licensee,$Project::filePath_Entity,$Project::sourceURL_Entity,$Project::sourceURL_Licensee">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_6695470d6e2742e08615e380f75d68bb")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_6695470d6e2742e08615e380f75d68bb")]
+[assembly: AssemblyCopyright("Copyright @  2024")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -2760,35 +2761,14 @@ namespace ST_6695470d6e2742e08615e380f75d68bb.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_6695470d6e2742e08615e380f75d68bb")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_6695470d6e2742e08615e380f75d68bb")]
-[assembly: AssemblyCopyright("Copyright @  2024")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------

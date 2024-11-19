@@ -11,9 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Get - ADRE Files"
   DTS:PackageType="5"
-  DTS:ProtectionLevel="2"
-  DTS:VersionBuild="19"
-  DTS:VersionGUID="{15B87BEB-BC39-4558-810F-17C40165733C}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{79EC3A16-345C-4916-A952-22123BFCE541}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -28,26 +27,14 @@
           <DTS:HttpConnection
             DTS:ServerURL="https://services.azre.gov/PdbWeb/List/DownloadList"
             DTS:UseSecureConnection="True">
-            <EncryptedData
-              Type="http://www.w3.org/2001/04/xmlenc#Element"
-              Salt="3huQKwjL7hI="
-              IV="ylw0r2OOLjV3S0bkG2NRqw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
-              <EncryptionMethod
-                Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
-              <CipherData>
-                <CipherValue>ylw0r2OOLjV3S0bkG2NRq3CrccdFK2a9FpyFmd5fcNwbhDYToo6cRu1/X3B7hIbTY2HdAWIzhOE8L63gqmzdrsLHfaDITI8vcsLqhSqgwgUDX82yIdCVbAdnA5J8S32bqPc/AJnwS392Ci3ekoWckQ1GyFQLbmm0r2D5ZTFLPp9hoIIJbjEQtPwids/P7CUY</CipherValue>
-              </CipherData>
-            </EncryptedData>
-            <EncryptedData
-              Type="http://www.w3.org/2001/04/xmlenc#Element"
-              Salt="eUenx4RFo9E="
-              IV="8quNEPxlRno4yzg7A5vSqw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
-              <EncryptionMethod
-                Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
-              <CipherData>
-                <CipherValue>8quNEPxlRno4yzg7A5vSq2k2+w0rE2vArqk7m0l5gvMdL6ixux7g/gv4k9IXz0hr/5VFCrQkk9STKYdtiUJWhWCHc3H5/PdpkmmRStl1iTv8021+Zkp6LKLIZq6VTOmUX2tb6r0R4Xco+UnCq/uYpn8DjBir51jMeqHnQ3TTQFaULmGSifdDflY3y/PRGeL8</CipherValue>
-              </CipherData>
-            </EncryptedData>
+            <DTS:Property
+              DTS:Name="ServerPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmMDM6mTb20Sn+XhEPCYEWQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA4ERgpG567dQ/AIZYWw0DeKk1+MtFNHzcsq4O0GSN67AAAAAAOgAAAAAIAACAAAACbV5YzbTP7nGquNJRo/2JdBUdKJqLzpW2fDe34rf18HRAAAAAfPxPajAxb4a5DzIlfCmPRQAAAADdsDgrvuyJ2BH01HSUC5f7sGt9+gUjY35WPCO3k+HI2csT9bFsVmHdNNH7EFe8nVNG1rL2eIkPQGOWTTY2V3KY</DTS:Property>
+            <DTS:Property
+              DTS:Name="ProxyPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmMDM6mTb20Sn+XhEPCYEWQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABPCW2C3VDdhra9eHbFAhgmfARFn/YK1QHJGXoYW798GgAAAAAOgAAAAAIAACAAAABi16jLmFt1MyCjhuH/nVWkdpb0B/MzqqtKfBvh68thJRAAAABVsRE0WyBd9Ohs/JPYBQGBQAAAAPIyB5RJcBUoO/OIFAdpcXSmkgh8bYlsE1Mf+uHR6O7FJVYsTWdxUV2DSDati4jDKV3+5CY9c0Q1tXOxjdNH6bQ</DTS:Property>
           </DTS:HttpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -288,14 +275,35 @@
   </resheader>
 </root>]]></ProjectItem>
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_6695470d6e2742e08615e380f75d68bb")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_6695470d6e2742e08615e380f75d68bb")]
+[assembly: AssemblyCopyright("Copyright @  2024")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="ScriptMain.cs"
             Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -472,35 +480,14 @@ namespace ST_6695470d6e2742e08615e380f75d68bb.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_6695470d6e2742e08615e380f75d68bb")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_6695470d6e2742e08615e380f75d68bb")]
-[assembly: AssemblyCopyright("Copyright @  2024")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
