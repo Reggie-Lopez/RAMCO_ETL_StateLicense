@@ -1,0 +1,1259 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/4/2024 12:41:21 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="HOME-BASE"
+  DTS:CreatorName="HOME-BASE\Lopez"
+  DTS:DTSID="{24D6BF07-7B70-4085-AC67-57835097E9CD}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="sync - FLasdfa"
+  DTS:PackageType="5"
+  DTS:VersionBuild="240"
+  DTS:VersionGUID="{DE8048A9-C943-498B-953B-A2401C226BEA}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Entities - CSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{DF897396-0D24-4C0A-8BF8-05F932BFE7D2}"
+      DTS:ObjectName="Entities - CSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:DataRowsToSkip="390"
+          DTS:TextQualifier="_x005C_0"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Integration Components\FL\Working\entities.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="129"
+              DTS:ObjectName="FileRow"
+              DTS:DTSID="{D40FEDBE-679B-4867-B023-D2858AE279D6}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[HOME-BASE.mmpsmembers]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{9B5E2BDF-F6BE-4872-AF4E-9F444008E4F2}"
+      DTS:ObjectName="HOME-BASE.mmpsmembers">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=HOME-BASE;Initial Catalog=mmpsmembers;Integrated Security=True;Encrypt=False;Application Name=&quot;SSIS-sync - FLasdfa-{9B5E2BDF-F6BE-4872-AF4E-9F444008E4F2}HOME-BASE.mmpsmembers&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Licensees - CSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{64AF5503-DF22-4D5E-B543-912262F2A5C3}"
+      DTS:ObjectName="Licensees - CSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:DataRowsToSkip="390"
+          DTS:TextQualifier="_x005C_0"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Integration Components\FL\Working\licensees.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="400"
+              DTS:DataType="129"
+              DTS:ObjectName="FileRow"
+              DTS:DTSID="{C2587674-91C0-4930-B4E7-586C294F8D41}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[RAMCO]"
+      DTS:CreationName="DYNAMICS-CRM"
+      DTS:DTSID="{DA6A0833-9762-403D-B572-ED55246AA341}"
+      DTS:ObjectName="RAMCO">
+      <DTS:ObjectData>
+        <ConnectionManager
+          ConnectionString="DeploymentType=Crm2011;ServerHost=https://mmpscrm.ramcoams.org/;ServerUser=reggie.lopez@ramco.ams;OrganizationName=MMPSCRM (MMPSCRM);ServerTimeout=100;RetainSameConnection=True;Compression=False;ConnectionSharing=False;CallerId=;OrganizationUrl=;ProxyHost=;ProxyPort=0;ProxyUser=;"
+          ConnectByProxy="False">
+          <ServerPassword
+            Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmMDM6mTb20Sn+XhEPCYEWQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACVsEN2wW7ec6hx7qc1Cc74HnYy5kazKRxUw+SS9mmD/AAAAAAOgAAAAAIAACAAAADudaGGpy8rfh2G/kYADoxAvrX4FX/JZSvn0qEpmClyQCAAAACCvJGXxa36EyXB0pXl9xEWDk1YzLsoreRXDxOFwaCmOEAAAABHWlKfHKnO9OO1rLR5NaQgXYJM9OJlDaC98r0wM/RmWCNT073D+74Fz2ROyrKSioZ14BG+Lk+CZ75bCk5KgYsz</ServerPassword>
+        </ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[RAMCO 1]"
+      DTS:CreationName="DynamicsCRM"
+      DTS:DTSID="{E0E15464-278C-443E-AB02-0EBED17C0CCA}"
+      DTS:ObjectName="RAMCO 1">
+      <DTS:PropertyExpression
+        DTS:Name="ServerUrl">"https://" + @[User::orgName]  +  "crm.ramcoams.org"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <CrmConnectionManager
+          ConnectionString="AuthenticationType=Federation;ServiceEndpoint=Soap2011;UserName=reggie.lopez@ramco.ams;Domain=;ServerUrl=&quot;https://RPCRACRM (RPCRACRM)crm.ramcoams.org&quot;;ProxyUsername=;ProxyMode=NoProxy;ProxyServer=;ProxyServerPort=0;BypassProxyOnLocal=False;HomeRealmUri=;ApiVersion=;ServiceTimeout=120;RetryOnIntermittentErrors=True;IgnoreCertificateErrors=False;TimezoneConversionEngine=Auto"
+          ConnectByProxy="False">
+          <Password
+            Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmMDM6mTb20Sn+XhEPCYEWQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABM87uLmI0nSLX8/apRXmTQBsJLeXR4h3xWMtuYO7y3zAAAAAAOgAAAAAIAACAAAACRPHsygCbIc1XMD3rddxpHnL4MCKhZv04J0Yz43GAKECAAAADJ+bcUc80IDvNukpUsXMPZJaVS2t5eXirJBSLX1eQ2o0AAAABc5CdM79gr7t9VXqywl5WyZRqvV2KDqHhBO1OjxfnaaUGA9YF4UeFBA9v3/htQ26ND2WIF7kzRBN7RS+wIeoSR</Password>
+        </CrmConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9728B7B1-F6AF-4CA0-B990-18F6067AEFE8}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="authToken">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3757A2A4-59B1-428B-AFE1-DC390AF344BE}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="changeToken">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{89BCDE12-43FB-48CF-8310-1E154562CD07}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="user"
+      DTS:ObjectName="entitiesCSV"
+      DTS:ReadOnly="True">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{667385A3-62AD-45C1-BEF7-8839271E1A0B}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="orgGUID">
+      <DTS:VariableValue
+        DTS:DataType="8">{D18728F0-0595-45BF-AB04-723F22EE5442}</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2CE329C3-B801-477F-88F0-7E4C2BA0E5CA}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="UPPER( @[User::orgPrefix] + &quot;crm (&quot; + @[User::orgPrefix] + &quot;crm)&quot;)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="orgName">
+      <DTS:VariableValue
+        DTS:DataType="8">RPCRACRM (RPCRACRM)</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A93DEF4B-B1D8-4522-A3D6-024281B8EF1C}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="orgPrefix">
+      <DTS:VariableValue
+        DTS:DataType="8">rpcra</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6210996F-BBD2-4DE1-A892-531A58739DDA}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;https://&quot; + @[User::orgPrefix] + &quot;crm.ramcoams.org/&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="orgURL">
+      <DTS:VariableValue
+        DTS:DataType="8">https://rpcracrm.ramcoams.org/</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{AE20311F-B9EC-49FF-9BC4-254630FF9531}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{9B5E2BDF-F6BE-4872-AF4E-9F444008E4F2}"
+          SQLTask:SqlStatementSource="UPDATE dbo.membershipstoken&#xA;SET token = ?&#xA;WHERE id = 'c4e98572-2e4a-45d1-bc7a-0a44465a11a0';" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="changeTokenValue"
+            SQLTask:DtsVariableName="User::changeToken"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="16"
+            SQLTask:ParameterSize="100" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get - Change Token"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{D9391250-F4AE-41AE-82A0-F0692DB04751}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get - Change Token"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{9B5E2BDF-F6BE-4872-AF4E-9F444008E4F2}"
+          SQLTask:SqlStatementSource="SELECT token FROM dbo.membershipstoken WHERE id = 'c4e98572-2e4a-45d1-bc7a-0a44465a11a0';&#xA;"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::changeToken" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Sync - MMPS Members to DB"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{7cabd081-7494-43e5-acde-743dad2ad5d6}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sync - MMPS Members to DB"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Sync - MMPS Members to DB\ADO NET Destination"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="ADO NET Destination"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."memberships"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[HOME-BASE.mmpsmembers]"
+                  connectionManagerRefId="Package.ConnectionManagers[HOME-BASE.mmpsmembers]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[statecode]"
+                      cachedDataType="i4"
+                      cachedName="statecode"
+                      externalMetadataColumnId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[statecode]"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[statecode]" />
+                    <inputColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[statuscode]"
+                      cachedDataType="i4"
+                      cachedName="statuscode"
+                      externalMetadataColumnId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[statuscode]"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[statuscode]" />
+                    <inputColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[cobalt_membershipid]"
+                      cachedDataType="guid"
+                      cachedName="cobalt_membershipid"
+                      externalMetadataColumnId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[membershipID]"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[cobalt_membershipid]" />
+                    <inputColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[_contact]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="_contact"
+                      externalMetadataColumnId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[contactGUID]"
+                      lineageId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_contact]" />
+                    <inputColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[_office]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="_office"
+                      externalMetadataColumnId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[officeGUID]"
+                      lineageId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_office]" />
+                    <inputColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[_association]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="_association"
+                      externalMetadataColumnId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[assocGUID]"
+                      lineageId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_association]" />
+                    <inputColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[_stateassociation]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="_stateassociation"
+                      externalMetadataColumnId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[assocStateGUID]"
+                      lineageId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_stateassociation]" />
+                    <inputColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[_membertype]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="_membertype"
+                      externalMetadataColumnId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[memberTypeGUID]"
+                      lineageId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_membertype]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[membershipID]"
+                      dataType="guid"
+                      name="membershipID" />
+                    <externalMetadataColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[contactGUID]"
+                      dataType="wstr"
+                      length="1073741823"
+                      name="contactGUID" />
+                    <externalMetadataColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[officeGUID]"
+                      dataType="wstr"
+                      length="1073741823"
+                      name="officeGUID" />
+                    <externalMetadataColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[assocGUID]"
+                      dataType="wstr"
+                      length="1073741823"
+                      name="assocGUID" />
+                    <externalMetadataColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[assocStateGUID]"
+                      dataType="wstr"
+                      length="1073741823"
+                      name="assocStateGUID" />
+                    <externalMetadataColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[memberTypeGUID]"
+                      dataType="wstr"
+                      length="1073741823"
+                      name="memberTypeGUID" />
+                    <externalMetadataColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[statuscode]"
+                      dataType="i4"
+                      name="statuscode" />
+                    <externalMetadataColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[statecode]"
+                      dataType="i4"
+                      name="statecode" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Sync - MMPS Members to DB\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Sync - MMPS Members to DB\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Sync - MMPS Members to DB\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Sync - MMPS Members to DB\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Sync - MMPS Members to DB\Derived Column.Inputs[Derived Column Input].Columns[cobalt_contactid]"
+                      cachedDataType="guid"
+                      cachedName="cobalt_contactid"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[cobalt_contactid]" />
+                    <inputColumn
+                      refId="Package\Sync - MMPS Members to DB\Derived Column.Inputs[Derived Column Input].Columns[ramco_associationid]"
+                      cachedDataType="guid"
+                      cachedName="ramco_associationid"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_associationid]" />
+                    <inputColumn
+                      refId="Package\Sync - MMPS Members to DB\Derived Column.Inputs[Derived Column Input].Columns[ramco_officeid]"
+                      cachedDataType="guid"
+                      cachedName="ramco_officeid"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_officeid]" />
+                    <inputColumn
+                      refId="Package\Sync - MMPS Members to DB\Derived Column.Inputs[Derived Column Input].Columns[ramco_stateassociationid]"
+                      cachedDataType="guid"
+                      cachedName="ramco_stateassociationid"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_stateassociationid]" />
+                    <inputColumn
+                      refId="Package\Sync - MMPS Members to DB\Derived Column.Inputs[Derived Column Input].Columns[cobalt_membertypeid]"
+                      cachedDataType="guid"
+                      cachedName="cobalt_membertypeid"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[cobalt_membertypeid]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Sync - MMPS Members to DB\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_stateassociation]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_stateassociation]"
+                      name="_stateassociation"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,100)#{Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_stateassociationid]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,100)ramco_stateassociationid</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_contact]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_contact]"
+                      name="_contact"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,100)#{Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[cobalt_contactid]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,100)cobalt_contactid</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_association]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_association]"
+                      name="_association"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,100)#{Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_associationid]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,100)ramco_associationid</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_office]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_office]"
+                      name="_office"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,100)#{Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_officeid]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,100)ramco_officeid</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_membertype]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_membertype]"
+                      name="_membertype"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,100)#{Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[cobalt_membertypeid]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,100)cobalt_membertypeid</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Sync - MMPS Members to DB\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Sync - MMPS Members to DB\JavaScript Component"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Use JavaScript code to automate any custom logic in the package data flow.; COZYROC LLC; SSIS+; © 2006-2024 COZYROC LLC; All Rights Reserved; http://www.cozyroc.com/;0"
+              description="Use JavaScript code to automate any custom logic in the package data flow."
+              name="JavaScript Component">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Code of the linked JavaScript file."
+                  name="JavaScriptCode"
+                  typeConverter="NOTBROWSABLE">&lt;![CDATA[// Documentation: http://www.cozyroc.com/ssis/script-dynamics-crm-entity-changes-source
+
+/* Copyright (c) 2006-2022 COZYROC LLC
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
+ documentation files (the "Software"), to deal in the Software without restriction, including without limitation 
+ the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and 
+ to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the 
+ Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE 
+ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR 
+ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+require("validation.js");
+require("component.metadata.js");
+
+component.parameters = {
+    CrmConnection: {
+        description: "The Dynamics CRM Connection Manager.",
+        category: "Settings",
+        type: { id: "connection", connectionTypes: "DYNAMICS-CRM" },
+        validate: validation.required,
+        order: 1
+    },
+    Entity: {
+        description: "The Dynamics CRM entity.",
+        category: "Settings",
+        type: {
+            id: "list",
+            values() {
+                // Returns list of entities in the currently selected Dynamics CRM connection.
+                var result = [];
+
+                if (this.parameters.CrmConnection.value) {
+                    var connection = this.connections[this.parameters.CrmConnection.value].acquire();
+                    connection.connect();
+
+                    try {
+                        var resultCSArray = connection.getEntityList(2);  // 2 - Read
+                        for (var i = 0; i &lt; resultCSArray.Length; i++)
+                            result.push(resultCSArray[i]);
+                        result.sort();
+                    }
+                    finally {
+                        connection.close();
+                    }
+                }
+
+                return result;
+            }
+        },
+        afterEdit(parameter) {
+            this.entityAttributes = null;
+        },
+        order: 2,
+        depends: "CrmConnection",
+        validate: validation.required
+    },
+    Attributes: {
+        description: "One or more attributes to retrieve.",
+        category: "Settings",
+        type: {
+            id: "list",
+            multiple: true,
+            values() {
+                //Returns list of attributes in the currently selected entity.
+                var result = [],
+                    entityAttributes = this.getAttributes();
+
+                for (var i in entityAttributes) {
+                    result.push(entityAttributes[i].Name);
+                }
+
+                return result;
+            }
+        },
+        order: 3,
+        depends: ["CrmConnection", "Entity"],
+        validate: validation.required
+    },
+    TokenVariable: {
+        description: "The variable containing token.",
+        category: "Settings",
+        type: { id: "variable", variableTypes: "string" },
+        order: 4,
+        validate: validation.required
+    },
+    BatchSize: {
+        description: "The retrieve batch size.",
+        category: "Settings",
+        type: "integer",
+        value: 5000,
+        order: 5,
+        validate: validation.greaterThan(0)
+    }
+};
+
+var listDelimiter = ",\n",
+    outputName = "Output 0";
+
+var OrganizationRequest = getClrType("CozyRoc.Dynamics.Crm2011.OrganizationService.OrganizationRequest"),
+    ColumnSet = getClrType("CozyRoc.Dynamics.Crm2011.OrganizationService.ColumnSet"),
+    PagingInfo = getClrType("CozyRoc.Dynamics.Crm2011.OrganizationService.PagingInfo");
+
+function compareAttributes(a, b) {
+    return a.Name.localeCompare(b.Name);
+}
+
+component.getAttributes = function () {
+    if (this.entityAttributes) {
+        return this.entityAttributes;
+    }
+
+    // Cache entity attributes.
+    if (this.parameters.CrmConnection.value &amp;&amp; this.parameters.Entity.value) {
+        this.entityAttributes = [];
+
+        var connection = this.connections[this.parameters.CrmConnection.value].acquire();
+        connection.connect();
+
+        try {
+            var entity = connection.getEntity(this.parameters.Entity.value);
+
+            this.entityAttributes = entity.GetAttributes().toArray();
+        }
+        finally {
+            connection.close();
+        }
+
+        this.entityAttributes.sort(compareAttributes);
+        return this.entityAttributes;
+    }
+
+    return [];
+}
+
+function findAttribute(attrList, name) {
+    var lcName = name.toLowerCase();
+
+    for (var i in attrList) {
+        var attr = attrList[i];
+        if (attr.Name.toLowerCase() === lcName) {
+            // Found.
+            return attr;
+        }
+    }
+
+    throw new Error(name + " attribute not found.");
+}
+
+function getType(value) {
+    try {
+        // Will suceed when value is CLR Type
+        return value.GetType().Name;
+    }
+    catch (ex) { }
+
+    // In case value is JavaScript type
+    return typeof value;
+}
+
+component.reinitializeMetadata = function () {
+    metadata.syncOutputs(this, [{ name: outputName }]);
+
+    var outputColumnsData = [];
+
+    if (this.parameters.Attributes.value) {
+        // Get entity attributes.
+        var entityAttrList = this.getAttributes(),
+            attrList = this.parameters.Attributes.value.split(listDelimiter);
+
+        // Setup entity change type column.
+        outputColumnsData.push({ name: "_Type", dataType: DataType.DT_WSTR, length: 10 });
+
+        // Setup entity identifier column.
+        outputColumnsData.push({ name: "Id", dataType: DataType.DT_GUID });
+
+        for (var i in attrList) {
+            // Find CRM attribute.
+            var attr = findAttribute(entityAttrList, attrList[i].toLowerCase());
+
+            // Setup output column.
+            outputColumnsData.push({
+                name: attr.Name,
+                dataType: attr.AttributeType,
+                length: attr.Length,
+                precision: attr.Precision,
+                scale: attr.Scale
+            });
+        }
+    }
+
+    metadata.syncColumns(this.outputCollection[outputName], outputColumnsData);
+};
+
+component.processData = function (inputBuffer, outputs) {
+    var outputBuffer = outputs[outputName],
+        connection = this.connections[this.parameters.CrmConnection.value].acquire();
+    connection.connect();
+
+    try {
+        // 0 - CRM Service
+        var service = connection.getService(0);
+
+        // Setup request.
+        var req = new OrganizationRequest();
+        req.RequestName = "RetrieveEntityChanges";
+        req["EntityName"] = this.parameters.Entity.value;
+
+        var columnSet = new ColumnSet(),
+            attrList = this.parameters.Attributes.value.split(listDelimiter);
+
+        columnSet.Columns = attrList;
+        req["Columns"] = columnSet;
+
+        var pi = new PagingInfo();
+        pi.Count = this.parameters.BatchSize.value;
+        pi.PageNumber = 1;
+
+        req["PageInfo"] = pi;
+        req["DataVersion"] = this.variables[this.parameters.TokenVariable.value].value;
+
+        while (true) {
+            var res = service.Execute(req),
+                entityChanges = res["EntityChanges"];
+
+            // Process entity changes.
+            for (i = 0; i &lt; entityChanges.Changes.Count; i++) {
+                var change = entityChanges.Changes[i];
+                outputBuffer.addRow();
+
+                var typeName = change.GetType().Name;
+
+                if (typeName === "NewOrUpdatedItem") {
+                    // New or updated.
+                    outputBuffer.set("_Type", "updated");
+                    outputBuffer.set("Id", change.NewOrUpdatedEntity.Id);
+
+                    for (var a = 0; a &lt; change.NewOrUpdatedEntity.Attributes.Count; a++) {
+                        var pair = change.NewOrUpdatedEntity.Attributes[a];
+                        if (attrList.indexOf(pair.Key) &lt; 0)
+                            continue;
+
+                        var value = pair.Value,
+                            type = getType(value);
+                        if (type === "EntityReference") {
+                            value = value.Id;
+                        }
+                        else if (type === "OptionSetValue" || type === "Money") {
+                            value = value.Value;
+                        }
+
+                        try {
+                            outputBuffer.set(pair.Key, value);
+                        }
+                        catch (ex) {
+                            console.error("Failed to process column '" + pair.Key + "': " + value);
+                        }
+                    }
+                }
+                else if (typeName === "RemovedOrDeletedItem") {
+                    // Deleted.
+                    outputBuffer.set("_Type", "deleted");
+                    outputBuffer.set("Id", change.RemovedItem.Id);
+                }
+            }
+
+            if (entityChanges.MoreRecords) {
+                // Setup next PageInfo.
+                pi.PageNumber += 1;
+                pi.PagingCookie = entityChanges.PagingCookie;
+            }
+            else {
+                // Reached end. Store token and exit loop.
+                this.variables[this.parameters.TokenVariable.value].value = entityChanges.DataToken;
+                break;
+            }
+        }
+
+        outputBuffer.setEndOfRowset();
+    }
+    finally {
+        connection.close();
+    }
+};
+]]&gt;</property>
+                <property
+                  dataType="System.String"
+                  description="Serialized parameters keys and values."
+                  name="ParametersValues"
+                  state="cdata"
+                  typeConverter="NOTBROWSABLE"><![CDATA[<dictionary>
+  <item>
+    <key>
+      <string>BatchSize</string>
+    </key>
+    <value>
+      <anyType xmlns:q1="http://www.w3.org/2001/XMLSchema" p5:type="q1:int" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance">5000</anyType>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>Attributes</string>
+    </key>
+    <value>
+      <anyType xmlns:q1="http://www.w3.org/2001/XMLSchema" p5:type="q1:string" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance">cobalt_contactid,
+cobalt_membershipid,
+ramco_associationid,
+ramco_nrdsid,
+ramco_officeid,
+ramco_realestatelicense,
+ramco_stateassociationid,
+statecode,
+statuscode,
+cobalt_membertypeid</anyType>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>Entity</string>
+    </key>
+    <value>
+      <anyType xmlns:q1="http://www.w3.org/2001/XMLSchema" p5:type="q1:string" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance">cobalt_membership</anyType>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>CrmConnection</string>
+    </key>
+    <value>
+      <anyType xmlns:q1="http://www.w3.org/2001/XMLSchema" p5:type="q1:string" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance">{DA6A0833-9762-403D-B572-ED55246AA341}</anyType>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>TokenVariable</string>
+    </key>
+    <value>
+      <anyType xmlns:q1="http://www.w3.org/2001/XMLSchema" p5:type="q1:string" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance">User::changeToken</anyType>
+    </value>
+  </item>
+</dictionary>]]></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the Package connection manager that the task uses."
+                  name="PackageConnection"
+                  typeConverter="NOTBROWSABLE"></property>
+                <property
+                  dataType="System.String"
+                  description="Select JavaScriptComponent."
+                  name="JavaScriptLinkedComponent"
+                  typeConverter="NOTBROWSABLE"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints in the script."
+                  isArray="true"
+                  name="Breakpoints"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">CozyRoc.JavaScriptComponent</property>
+              </properties>
+              <outputs>
+                <output
+                  refId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0]"
+                  name="Output 0">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[_Type]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[_Type]"
+                      name="_Type" />
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[Id]"
+                      dataType="guid"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[cobalt_contactid]"
+                      dataType="guid"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[cobalt_contactid]"
+                      name="cobalt_contactid" />
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[cobalt_membershipid]"
+                      dataType="guid"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[cobalt_membershipid]"
+                      name="cobalt_membershipid" />
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_associationid]"
+                      dataType="guid"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_associationid]"
+                      name="ramco_associationid" />
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_nrdsid]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_nrdsid]"
+                      name="ramco_nrdsid" />
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_officeid]"
+                      dataType="guid"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_officeid]"
+                      name="ramco_officeid" />
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_realestatelicense]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_realestatelicense]"
+                      name="ramco_realestatelicense" />
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_stateassociationid]"
+                      dataType="guid"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_stateassociationid]"
+                      name="ramco_stateassociationid" />
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[statecode]"
+                      dataType="i4"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[statecode]"
+                      name="statecode" />
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[statuscode]"
+                      dataType="i4"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[statuscode]"
+                      name="statuscode" />
+                    <outputColumn
+                      refId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[cobalt_membertypeid]"
+                      dataType="guid"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[cobalt_membertypeid]"
+                      name="cobalt_membertypeid" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Sync - MMPS Members to DB.Paths[Derived Column Output]"
+              endId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Sync - MMPS Members to DB.Paths[Output 0]"
+              endId="Package\Sync - MMPS Members to DB\Derived Column.Inputs[Derived Column Input]"
+              name="Output 0"
+              startId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{4A1F126F-51DD-44D0-A6D2-39A9ADDEF500}"
+      DTS:From="Package\Get - Change Token"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Sync - MMPS Members to DB" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{6E1F78AD-9F76-4419-87D7-9791710A621A}"
+      DTS:From="Package\Sync - MMPS Members to DB"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Execute SQL Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="168,514" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Get - Change Token"
+          TopLeft="163,278" />
+        <NodeLayout
+          Size="225,42"
+          Id="Package\Sync - MMPS Members to DB"
+          TopLeft="136,388" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="250.25,320">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,68"
+              Start="0,0"
+              End="0,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="250.75,430">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,84"
+              Start="0,0"
+              End="0,76.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,76.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Sync - MMPS Members to DB">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Sync - MMPS Members to DB\JavaScript Component"
+          TopLeft="442,67" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\Sync - MMPS Members to DB\ADO NET Destination"
+          TopLeft="448,338" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Sync - MMPS Members to DB\Derived Column"
+          TopLeft="457,226" />
+        <EdgeLayout
+          Id="Package\Sync - MMPS Members to DB.Paths[Output 0]"
+          TopLeft="536.5,109">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,117"
+              Start="0,0"
+              End="0,109.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,109.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sync - MMPS Members to DB.Paths[Derived Column Output]"
+          TopLeft="538.5,268">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,70"
+              Start="0,0"
+              End="0,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sync - MMPS Members to DB\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

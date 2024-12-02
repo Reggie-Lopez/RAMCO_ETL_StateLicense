@@ -1,0 +1,238 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/29/2023 10:38:16 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-GAJTCFV"
+  DTS:CreatorName="DESKTOP-GAJTCFV\Lopez"
+  DTS:DTSID="{5105EBB6-FBA7-43E8-928C-9F3C1E6B7CF6}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="get - DBPRFiles"
+  DTS:PackageType="5"
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{501DA557-7930-41D7-9903-A4ECC7A309EC}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[myfloridalicense.com]"
+      DTS:CreationName="HTTP (KingswaySoft)"
+      DTS:DTSID="{3EB2BADA-DF46-4961-9BAC-26EFC5CE2270}"
+      DTS:ObjectName="myfloridalicense.com">
+      <DTS:ObjectData>
+        <ConnectionManager
+          ConnectionString="BaseUrl=https://www2.myfloridalicense.com/sto/file_download/extracts/;AuthenticationMode=Credentials;JwtClaims='{&#xA;  &quot;header&quot;: {},&#xA;  &quot;payload&quot;: {}&#xA;}';JwtKeyFile=;CustomTokenCurlFile=;CustomTokenFindStrategy=JPath;CustomTokenFindExpression=;CustomTokenExpiry=0;AwsSignatureVersion=Version4;AwsSignatureMethod=HmacSHA1;AwsAccessKey=;AwsRegion=;AwsServiceName=;AzureOAuthType=ClientCredentials;AzureTenantId=;AzureClientId=;AzureCertificateLocation=Store;AzureCertificateThumbprint=;AzurePathToCertificate=;GoogleServiceAccount=;GoogleCertificateLocation=Store;GoogleCertificateThumbprint=;GooglePathToCertificate=;GoogleScope=;AzureScope=;PathToTokenFile=;AccessTokenRequestLocation=HttpHeader;Domain=;UserName=;ProxyMode=NoProxy;ProxyUsername=;ProxyServer=;ProxyServerPort=0;ThrottleRate=0;ThrottleRateUnit=PerSecond;ServiceTimeout=120;RetryOnIntermittentErrors=True;AllowAutoRedirect=True;DropAuthorizationHeaderOnRedirects=True;ChunkSize=0;CertificateLocation=Store;CertificateThumbprint=;PathToCertificate=;IgnoreCertificateErrors=False;CustomHeaders='{&#xA;  &quot;User-Agent&quot;: {&#xA;    &quot;value&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) SSIS Productivity Pack by KingswaySoft (like Gecko)&quot;&#xA;  },&#xA;  &quot;Accept-Encoding&quot;: {&#xA;    &quot;value&quot;: &quot;gzip, deflate&quot;&#xA;  }&#xA;}';HttpMethod=POST;ErrorCodes='[{&quot;code&quot;:&quot;408&quot;,&quot;retryable&quot;:true},{&quot;code&quot;:&quot;500&quot;,&quot;retryable&quot;:false},{&quot;code&quot;:&quot;502&quot;,&quot;retryable&quot;:true},{&quot;code&quot;:&quot;503&quot;,&quot;retryable&quot;:true},{&quot;code&quot;:&quot;504&quot;,&quot;retryable&quot;:true}]'"
+          ConnectByProxy="False" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute Package Task"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{4F0FBE01-EABB-4548-A926-FB3461AFFBA8}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute Package Task"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>Upsert - LicenseData - GreaterTampa.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get Entities"
+      DTS:CreationName="KingswaySoft.IntegrationToolkit.ProductivityPack.HttpRequesterTask"
+      DTS:Description="HTTP Requester Task"
+      DTS:DTSID="{6FA1C79E-E27E-4C35-930B-A7EAB24DBE9A}"
+      DTS:ExecutableType="KingswaySoft.IntegrationToolkit.ProductivityPack.HttpRequesterTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get Entities"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <InnerObject>
+          <ConnectionManager
+            Type="8"
+            Value="{3EB2BADA-DF46-4961-9BAC-26EFC5CE2270}" />
+          <RelativePath
+            Type="8"
+            Value="/RealEstateCorpLicense.csv" />
+          <RequestBody
+            Type="8"
+            Value="" />
+          <QueryStringParameters
+            Type="8"
+            Value="" />
+          <HeaderParameters
+            Type="8"
+            Value="" />
+          <ResponseOutputPath
+            Type="8"
+            Value="C:\Integration Components\FL\Sync Working Files\RealEstateCorpLicense.csv" />
+          <ResponseOutputVariable
+            Type="8"
+            Value="" />
+          <ContinueOnError
+            Type="11"
+            Value="0" />
+          <HttpMethod
+            Type="8"
+            Value="GET" />
+          <RequestBodyType
+            Type="3"
+            Value="0" />
+          <TargetServerVersion
+            Type="8"
+            Value="SQLServer2022" />
+        </InnerObject>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get Individuals"
+      DTS:CreationName="KingswaySoft.IntegrationToolkit.ProductivityPack.HttpRequesterTask"
+      DTS:Description="HTTP Requester Task"
+      DTS:DTSID="{62338585-4223-4752-937F-BF6D45090EEE}"
+      DTS:ExecutableType="KingswaySoft.IntegrationToolkit.ProductivityPack.HttpRequesterTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get Individuals"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <InnerObject>
+          <ConnectionManager
+            Type="8"
+            Value="{3EB2BADA-DF46-4961-9BAC-26EFC5CE2270}" />
+          <RelativePath
+            Type="8"
+            Value="/REALESTATE2501LICENSE_1.csv" />
+          <RequestBody
+            Type="8"
+            Value="" />
+          <QueryStringParameters
+            Type="8"
+            Value="" />
+          <HeaderParameters
+            Type="8"
+            Value="" />
+          <ResponseOutputPath
+            Type="8"
+            Value="C:\Integration Components\FL\Sync Working Files\REALESTATE2501LICENSE_1.csv" />
+          <ResponseOutputVariable
+            Type="8"
+            Value="" />
+          <ContinueOnError
+            Type="11"
+            Value="0" />
+          <HttpMethod
+            Type="8"
+            Value="GET" />
+          <RequestBodyType
+            Type="3"
+            Value="0" />
+          <TargetServerVersion
+            Type="8"
+            Value="SQLServer2022" />
+        </InnerObject>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{EE06B744-EE59-4DDC-8D1C-AF46B813AAD8}"
+      DTS:From="Package\Get Individuals"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Get Entities" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{D31566D1-1448-464B-8A76-94AA351B76F1}"
+      DTS:From="Package\Get Entities"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Execute Package Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Execute Package Task"
+          TopLeft="311.666649637952,362.26666414751" />
+        <NodeLayout
+          Size="136,42"
+          Id="Package\Get Entities"
+          TopLeft="332,267" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Get Individuals"
+          TopLeft="324.5,148.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="400.25,190.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,76.5"
+              Start="0,0"
+              End="0,69">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,69" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="403.583324818976,309">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.26666414751"
+              Start="0,0"
+              End="0,45.76666414751">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.76666414751" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
