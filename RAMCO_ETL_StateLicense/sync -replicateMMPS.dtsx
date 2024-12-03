@@ -5,17 +5,27 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="HOME-BASE"
   DTS:CreatorName="HOME-BASE\Lopez"
-  DTS:DTSID="{24D6BF07-7B70-4085-AC67-57835097E9CD}"
+  DTS:DTSID="{51073A39-B602-4788-8A7D-C4A277732B83}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5556.0"
+  DTS:LastModifiedProductVersion="16.0.5223.0"
   DTS:LocaleID="1033"
-  DTS:ObjectName="sync - FLasdfa"
+  DTS:ObjectName="sync -replicateMMPS"
   DTS:PackageType="5"
-  DTS:VersionBuild="240"
-  DTS:VersionGUID="{DE8048A9-C943-498B-953B-A2401C226BEA}">
+  DTS:VersionBuild="247"
+  DTS:VersionGUID="{2FA23AE9-127F-40CD-B230-D3A6A032699D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[COWRAMCOSQL_RAMCOSQLETL.mmpsmembers]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{9B5E2BDF-F6BE-4872-AF4E-9F444008E4F2}"
+      DTS:ObjectName="COWRAMCOSQL_RAMCOSQLETL.mmpsmembers">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=COWRAMCOSQL\RAMCOSQLETL;Initial Catalog=mmpsmembers;Integrated Security=True;Encrypt=False;Application Name=&quot;SSIS-sync - FLasdfa-{9B5E2BDF-F6BE-4872-AF4E-9F444008E4F2}HOME-BASE.mmpsmembers&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Entities - CSV]"
       DTS:CreationName="FLATFILE"
@@ -43,16 +53,6 @@
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[HOME-BASE.mmpsmembers]"
-      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-      DTS:DTSID="{9B5E2BDF-F6BE-4872-AF4E-9F444008E4F2}"
-      DTS:ObjectName="HOME-BASE.mmpsmembers">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=HOME-BASE;Initial Catalog=mmpsmembers;Integrated Security=True;Encrypt=False;Application Name=&quot;SSIS-sync - FLasdfa-{9B5E2BDF-F6BE-4872-AF4E-9F444008E4F2}HOME-BASE.mmpsmembers&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -95,7 +95,7 @@
           ConnectByProxy="False">
           <ServerPassword
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmMDM6mTb20Sn+XhEPCYEWQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACVsEN2wW7ec6hx7qc1Cc74HnYy5kazKRxUw+SS9mmD/AAAAAAOgAAAAAIAACAAAADudaGGpy8rfh2G/kYADoxAvrX4FX/JZSvn0qEpmClyQCAAAACCvJGXxa36EyXB0pXl9xEWDk1YzLsoreRXDxOFwaCmOEAAAABHWlKfHKnO9OO1rLR5NaQgXYJM9OJlDaC98r0wM/RmWCNT073D+74Fz2ROyrKSioZ14BG+Lk+CZ75bCk5KgYsz</ServerPassword>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA50Y11xVxdUiWHFKV0npVYgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACSuSgV3ODg4q/Tzc/2Bho/AAAAAASAAACgAAAAEAAAABkDnU9oSMZFSRsUGJvyHkcgAAAAc2BrDdv/kbsef7Um+Tl95dwLvPzPdrjZTExYGZIIz30UAAAA78kfwo9rnKB47cFfaMn/ZBw2c6w</ServerPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -109,11 +109,7 @@
       <DTS:ObjectData>
         <CrmConnectionManager
           ConnectionString="AuthenticationType=Federation;ServiceEndpoint=Soap2011;UserName=reggie.lopez@ramco.ams;Domain=;ServerUrl=&quot;https://RPCRACRM (RPCRACRM)crm.ramcoams.org&quot;;ProxyUsername=;ProxyMode=NoProxy;ProxyServer=;ProxyServerPort=0;BypassProxyOnLocal=False;HomeRealmUri=;ApiVersion=;ServiceTimeout=120;RetryOnIntermittentErrors=True;IgnoreCertificateErrors=False;TimezoneConversionEngine=Auto"
-          ConnectByProxy="False">
-          <Password
-            Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmMDM6mTb20Sn+XhEPCYEWQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABM87uLmI0nSLX8/apRXmTQBsJLeXR4h3xWMtuYO7y3zAAAAAAOgAAAAAIAACAAAACRPHsygCbIc1XMD3rddxpHnL4MCKhZv04J0Yz43GAKECAAAADJ+bcUc80IDvNukpUsXMPZJaVS2t5eXirJBSLX1eQ2o0AAAABc5CdM79gr7t9VXqywl5WyZRqvV2KDqHhBO1OjxfnaaUGA9YF4UeFBA9v3/htQ26ND2WIF7kzRBN7RS+wIeoSR</Password>
-        </CrmConnectionManager>
+          ConnectByProxy="False" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -297,8 +293,8 @@
               <connections>
                 <connection
                   refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Connections[IDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[HOME-BASE.mmpsmembers]"
-                  connectionManagerRefId="Package.ConnectionManagers[HOME-BASE.mmpsmembers]"
+                  connectionManagerID="Package.ConnectionManagers[COWRAMCOSQL_RAMCOSQLETL.mmpsmembers]"
+                  connectionManagerRefId="Package.ConnectionManagers[COWRAMCOSQL_RAMCOSQLETL.mmpsmembers]"
                   description="Managed connection manager"
                   name="IDbConnection" />
               </connections>
@@ -322,6 +318,41 @@
                       externalMetadataColumnId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[statuscode]"
                       lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[statuscode]" />
                     <inputColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[ramco_realestatelicense]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ramco_realestatelicense"
+                      externalMetadataColumnId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[reLicenseNumber]"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_realestatelicense]" />
+                    <inputColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[ramco_nrdsid]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ramco_nrdsid"
+                      externalMetadataColumnId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[nrdsID]"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_nrdsid]" />
+                    <inputColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[_stateassociation]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="_stateassociation"
+                      externalMetadataColumnId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[assocStateGUID]"
+                      lineageId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_stateassociation]" />
+                    <inputColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[_membertype]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="_membertype"
+                      externalMetadataColumnId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[memberTypeGUID]"
+                      lineageId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_membertype]" />
+                    <inputColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[_association]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="_association"
+                      externalMetadataColumnId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[assocGUID]"
+                      lineageId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_association]" />
+                    <inputColumn
                       refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[cobalt_membershipid]"
                       cachedDataType="guid"
                       cachedName="cobalt_membershipid"
@@ -341,27 +372,6 @@
                       cachedName="_office"
                       externalMetadataColumnId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[officeGUID]"
                       lineageId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_office]" />
-                    <inputColumn
-                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[_association]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="_association"
-                      externalMetadataColumnId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[assocGUID]"
-                      lineageId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_association]" />
-                    <inputColumn
-                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[_stateassociation]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="_stateassociation"
-                      externalMetadataColumnId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[assocStateGUID]"
-                      lineageId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_stateassociation]" />
-                    <inputColumn
-                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[_membertype]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="_membertype"
-                      externalMetadataColumnId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[memberTypeGUID]"
-                      lineageId="Package\Sync - MMPS Members to DB\Derived Column.Outputs[Derived Column Output].Columns[_membertype]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -402,6 +412,16 @@
                       refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[statecode]"
                       dataType="i4"
                       name="statecode" />
+                    <externalMetadataColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[nrdsID]"
+                      dataType="wstr"
+                      length="1073741823"
+                      name="nrdsID" />
+                    <externalMetadataColumn
+                      refId="Package\Sync - MMPS Members to DB\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[reLicenseNumber]"
+                      dataType="wstr"
+                      length="1073741823"
+                      name="reLicenseNumber" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -468,6 +488,54 @@
                       cachedDataType="guid"
                       cachedName="cobalt_membertypeid"
                       lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[cobalt_membertypeid]" />
+                    <inputColumn
+                      refId="Package\Sync - MMPS Members to DB\Derived Column.Inputs[Derived Column Input].Columns[ramco_nrdsid]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ramco_nrdsid"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_nrdsid]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_nrdsid]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM(ramco_nrdsid)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Sync - MMPS Members to DB\Derived Column.Inputs[Derived Column Input].Columns[ramco_realestatelicense]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ramco_realestatelicense"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_realestatelicense]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\Sync - MMPS Members to DB\JavaScript Component.Outputs[Output 0].Columns[ramco_realestatelicense]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM(ramco_realestatelicense)</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
