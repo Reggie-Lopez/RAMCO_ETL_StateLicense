@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="sync - FL"
   DTS:PackageType="5"
-  DTS:VersionBuild="205"
-  DTS:VersionGUID="{D188E9B5-4884-4A62-868C-1DEB31731F32}">
+  DTS:VersionBuild="208"
+  DTS:VersionGUID="{3FA11173-FADB-4EA0-A5AB-679EB3C70954}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -89,21 +89,8 @@
           ConnectByProxy="False">
           <ServerPassword
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmMDM6mTb20Sn+XhEPCYEWQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAArK0z5UoAf/nfrj0zgtKj7TQyJ7HYFbI5z7PtOohdhrQAAAAAOgAAAAAIAACAAAAA+Q/A3ac+zY9YDuwkK1xtzIMjWokvXGFVYGwF0PS6YaiAAAACI/TcFnCddzxZ+XQaoMrW8XHVAQiBmh4sUJDgG8uKZO0AAAAAJTUFLmmoy7Cmjq/tE46MCq3zHUGMt9MNgrxp1ws2p6sPLEEi5oh0fjfxTrZKhfJxBfpha/HyxaUiinhOfjYdw</ServerPassword>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmMDM6mTb20Sn+XhEPCYEWQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAGYaJWHjTyrtC3ImKhOavxsLcMobP/bFw7Ei/tr9cc3wAAAAAOgAAAAAIAACAAAAANsHOhcBActK1lqW7Wl1hlqoF+zEunCLgEBzvW1xp/uyAAAAByqjFwwAR4K3e5SQ2bEX/dwlvAM+CIlRAewcN6Q0nvO0AAAABzlBw+D8Kp3N9HM8lmAw9JUbK8shvaDTR6xcMT8auAM/fCclLjraTez8gOwaFzYCX9MOyzlkhOqT+4yBpB0842</ServerPassword>
         </ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[RAMCO 1]"
-      DTS:CreationName="DynamicsCRM"
-      DTS:DTSID="{DE4F266D-45D1-4159-911E-7A7CD5A0C4FF}"
-      DTS:ObjectName="RAMCO 1">
-      <DTS:PropertyExpression
-        DTS:Name="ServerUrl">"https://" + @[User::orgName]  +  "crm.ramcoams.org"</DTS:PropertyExpression>
-      <DTS:ObjectData>
-        <CrmConnectionManager
-          ConnectionString="AuthenticationType=Federation;ServiceEndpoint=Soap2011;UserName=reggie.lopez@ramco.ams;Domain=;ServerUrl=&quot;https://RPCRACRM (RPCRACRM)crm.ramcoams.org&quot;;ProxyUsername=;ProxyMode=NoProxy;ProxyServer=;ProxyServerPort=0;BypassProxyOnLocal=False;HomeRealmUri=;ApiVersion=;ServiceTimeout=120;RetryOnIntermittentErrors=True;IgnoreCertificateErrors=False;TimezoneConversionEngine=Auto"
-          ConnectByProxy="False" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
