@@ -5,21 +5,21 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="HOME-BASE"
   DTS:CreatorName="HOME-BASE\Lopez"
-  DTS:DTSID="{C815828C-DEFD-433E-8716-63B1629227AD}"
+  DTS:DTSID="{F70617DF-A3C1-4611-8B57-C1812DED1565}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5223.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="sync - FL prod"
   DTS:PackageType="5"
-  DTS:VersionBuild="242"
-  DTS:VersionGUID="{E395C019-52AF-4719-8F9A-3261ECCD8E9B}">
+  DTS:VersionBuild="247"
+  DTS:VersionGUID="{1C8FFAEE-69BA-4343-9CA9-D6A9EED66065}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Entities - CSV]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{C6346B10-9166-4C31-9A0B-EAEB59384AC4}"
+      DTS:DTSID="{67A76261-7C9D-48E0-B5AF-5E1047D4A261}"
       DTS:ObjectName="Entities - CSV">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -39,7 +39,7 @@
               DTS:MaximumWidth="4000"
               DTS:DataType="129"
               DTS:ObjectName="FileRow"
-              DTS:DTSID="{4B1889E0-4FC1-4F1D-B566-F209B700232C}"
+              DTS:DTSID="{27877922-87C4-4829-A7D8-7DE15AC6264C}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -48,7 +48,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Licensees - CSV]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{3C24C7A8-88D4-476A-96DD-2957C39CE1D4}"
+      DTS:DTSID="{82AC5D5D-078C-4496-8819-7396B3EE6EBC}"
       DTS:ObjectName="Licensees - CSV">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -68,7 +68,7 @@
               DTS:MaximumWidth="400"
               DTS:DataType="129"
               DTS:ObjectName="FileRow"
-              DTS:DTSID="{78B8F291-C54B-4663-BC2C-9143582BE9F3}"
+              DTS:DTSID="{E22776E0-1528-44C3-85D8-89536EC497EE}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -77,7 +77,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[RAMCO]"
       DTS:CreationName="DYNAMICS-CRM"
-      DTS:DTSID="{0495212E-2126-4856-85C6-A4A5EAD5F5F1}"
+      DTS:DTSID="{C570B595-B470-415D-8074-FC32B35967B0}"
       DTS:ObjectName="RAMCO">
       <DTS:PropertyExpression
         DTS:Name="ConnectionString">@[User::connectionString]</DTS:PropertyExpression>
@@ -91,7 +91,7 @@
           ConnectByProxy="False">
           <ServerPassword
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA50Y11xVxdUiWHFKV0npVYgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABuKOMY2ztUKEaY+ZyVdLHcAAAAAASAAACgAAAAEAAAANU/0TKw15STtdY48Ntev2cgAAAAc3svr3AhC5dHYNHcC5YORthZ+sarzsvxO81+Cm/0+6kUAAAATTIrqPe+jppnFJBJ+fvhPoY4xQ8</ServerPassword>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA50Y11xVxdUiWHFKV0npVYgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABbdmJkwIObYOJEO24DzEEoAAAAAASAAACgAAAAEAAAALwFEsrPMjA5zHLa67XJXlIgAAAAcRTmR8gxCazQ/pksKXwUD8nLhsqLvKrvPfnaStehO/sUAAAAd4ceL7z6sMWhMqCV/vtUXhG5NAc</ServerPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -99,7 +99,7 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{899E69B9-1BF6-4BF6-BAA6-2488852DFB41}"
+      DTS:DTSID="{3699417C-CB62-4702-8D05-724176F3527C}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;DeploymentType=Crm2011;ServerHost=&quot; + @[User::orgURL] + &quot;;ServerUser=reggie.lopez@ramco.ams;OrganizationName=&quot; + @[User::orgName] + &quot;;ServerTimeout=100;RetainSameConnection=True;Compression=False;ConnectionSharing=False;CallerId=;OrganizationUrl=;ProxyHost=;ProxyPort=0;ProxyUser=;&quot;"
       DTS:IncludeInDebugDump="2345"
@@ -110,7 +110,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{0A007C6D-970A-45EE-BCE9-E2FC5706B53D}"
+      DTS:DTSID="{CBD3ABB3-27EF-41C3-B317-AAE69A13DB2A}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="user"
       DTS:ObjectName="entitiesCSV"
@@ -129,7 +129,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{603FB1F4-DC71-4FAB-A997-0A1621910C8E}"
+      DTS:DTSID="{36CF5425-2357-479D-A1F1-4635B6F4E89E}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="orgGUID">
@@ -138,7 +138,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{C0EB7D4A-E200-4805-8EC1-9E51098CF3A3}"
+      DTS:DTSID="{CE592906-6B03-40DF-9F2F-3E405579E9D4}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="UPPER( @[User::orgPrefix] + &quot;crm (&quot; + @[User::orgPrefix] + &quot;crm)&quot;)"
       DTS:IncludeInDebugDump="2345"
@@ -149,7 +149,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{A87A5B8C-E2FD-4F4E-A679-8A60FA5C3069}"
+      DTS:DTSID="{52B1ECC2-2C3C-4445-847F-97B8DDDD0438}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="orgPrefix">
@@ -158,7 +158,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{B577FF14-5388-497B-B0EB-9F96ACA81D39}"
+      DTS:DTSID="{3F1D9C0B-54B9-4D7D-A110-99B540C85231}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;https://&quot; + @[User::orgPrefix] + &quot;crm.ramcoams.org/&quot;"
       DTS:IncludeInDebugDump="2345"
@@ -173,15 +173,15 @@
       DTS:refId="Package\Foreach Loop Container"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:Description="Foreach Loop Container"
-      DTS:DTSID="{09E92EDF-85A7-450B-809F-835D2976F3AA}"
+      DTS:DTSID="{09F35CED-C3EB-454F-9954-FCBA60EEDEC7}"
       DTS:ExecutableType="STOCK:FOREACHLOOP"
       DTS:LocaleID="-1"
       DTS:MaxErrorCount="8"
       DTS:ObjectName="Foreach Loop Container">
       <DTS:ForEachEnumerator
         DTS:CreationName="Microsoft.ForEachItemEnumerator"
-        DTS:DTSID="{43331086-97C1-4648-841D-F08E19A3E08B}"
-        DTS:ObjectName="{43331086-97C1-4648-841D-F08E19A3E08B}">
+        DTS:DTSID="{A4B17A17-DA28-4CA3-9225-8EDC8F598913}"
+        DTS:ObjectName="{A4B17A17-DA28-4CA3-9225-8EDC8F598913}">
         <DTS:ObjectData>
           <FEIEItems>
             <FEIEItem>
@@ -265,7 +265,7 @@
           DTS:refId="Package\Foreach Loop Container\Sequence Container"
           DTS:CreationName="STOCK:SEQUENCE"
           DTS:Description="Sequence Container"
-          DTS:DTSID="{489830F4-4D28-42FC-BED7-BF5CCA1AE674}"
+          DTS:DTSID="{3EE663E9-DCAC-4C34-B74F-C5F0A16B8B47}"
           DTS:ExecutableType="STOCK:SEQUENCE"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sequence Container">
@@ -275,7 +275,7 @@
               DTS:refId="Package\Foreach Loop Container\Sequence Container\Associate Licenses"
               DTS:CreationName="Microsoft.Pipeline"
               DTS:Description="Data Flow Task"
-              DTS:DTSID="{F6958E1F-800A-40ED-861E-F7867911BE3B}"
+              DTS:DTSID="{5A11B83C-059D-4797-AA8B-79A3F45CC3A9}"
               DTS:ExecutableType="Microsoft.Pipeline"
               DTS:LocaleID="-1"
               DTS:ObjectName="Associate Licenses"
@@ -3445,7 +3445,7 @@
               DTS:refId="Package\Foreach Loop Container\Sequence Container\Log orgName in Console"
               DTS:CreationName="Microsoft.ScriptTask"
               DTS:Description="Script Task"
-              DTS:DTSID="{54103FC0-8CD6-45DD-B2A2-CB2E01EE70A4}"
+              DTS:DTSID="{C1109D0E-B7C8-4738-BC5A-44A58A487E01}"
               DTS:ExecutableType="Microsoft.ScriptTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="Log orgName in Console"
@@ -3454,10 +3454,19 @@
               <DTS:ObjectData>
                 <ScriptProject
                   Name="ST_26b8829443824bfa80d1f2e6000d82f0"
-                  VSTAMajorVersion="16"
+                  VSTAMajorVersion="15"
                   VSTAMinorVersion="0"
                   Language="CSharp"
                   ReadOnlyVariables="User::orgName">
+                  <ProjectItem
+                    Name="Properties\Settings.settings"
+                    Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
                   <ProjectItem
                     Name="Properties\Resources.resx"
                     Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -3577,35 +3586,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
-                  <ProjectItem
-                    Name="Properties\Settings.Designer.cs"
-                    Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_0e12ff607d5349aaadd06609b6da1829.Properties.Settings.get_Default():ST_0e12ff607d5349aaadd06609b6da1829.Properties.Sett" +
-    "ings")]
-
-namespace ST_0e12ff607d5349aaadd06609b6da1829.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
                   <ProjectItem
                     Name="ST_26b8829443824bfa80d1f2e6000d82f0.csproj"
                     Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -3821,7 +3801,7 @@ namespace ST_0e12ff607d5349aaadd06609b6da1829
     <msb:CodeName>ST_26b8829443824bfa80d1f2e6000d82f0</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>ST_26b8829443824bfa80d1f2e6000d82f0</msb:DisplayName>
-    <msb:ProjectId>{F9C2B185-3733-4B96-8F0F-5A4DC96CD6B3}</msb:ProjectId>
+    <msb:ProjectId>{ED26A2F8-D4D6-4AB1-901D-D3F1285FEB84}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="ST_26b8829443824bfa80d1f2e6000d82f0.csproj" />
@@ -3833,6 +3813,35 @@ namespace ST_0e12ff607d5349aaadd06609b6da1829
     <msb:File Include="ScriptMain.cs" />
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
+                  <ProjectItem
+                    Name="Properties\Settings.Designer.cs"
+                    Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_0e12ff607d5349aaadd06609b6da1829.Properties.Settings.get_Default():ST_0e12ff607d5349aaadd06609b6da1829.Properties.Sett" +
+    "ings")]
+
+namespace ST_0e12ff607d5349aaadd06609b6da1829.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
                   <ProjectItem
                     Name="Properties\AssemblyInfo.cs"
                     Encoding="UTF8"><![CDATA[using System.Reflection;
@@ -3863,15 +3872,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-                  <ProjectItem
-                    Name="Properties\Settings.settings"
-                    Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
                   <ProjectItem
                     Name="Properties\Resources.Designer.cs"
                     Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -3943,7 +3943,7 @@ namespace ST_0e12ff607d5349aaadd06609b6da1829.Properties {
                   <BinaryItem
                     Name="ST_26b8829443824bfa80d1f2e6000d82f0.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAGnjSWcAAAAAAAAAAOAAIiALATAAABIAAAAIAAAAAAAAPjAA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAEyeWWcAAAAAAAAAAOAAIiALATAAABIAAAAIAAAAAAAAPjAA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAOwvAABPAAAAAEAAAHgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -3974,7 +3974,7 @@ BUUAyQCTBUoAyQDVBVAA6QD5A1MA0QCtBQEAcQCBBAYAiQCBBAYA8QCtAF4A8QDIBWUAkQCBBGsA
 sQCBBAYACAAUAIUACAAYAIoAKQBzAPIALgALAMoALgATANMALgAbAPIALgAjAPsALgArACQBLgAz
 ACQBLgA7ACQBLgBDAPsALgBLACoBLgBTACQBLgBbAEEBQwBjAIoASQBzAPIAYQB7AIoAYwBrAIoA
 GwADAAEABAADAAAAVQS7AAAAGAHAAAAApQXFAAIABAADAAIABQAFAAEABgAFAAIABwAHAASAAAAB
-AAAAiyOERQAAAAAAAAEAAAAEAAAAAAAAAAAAAABzAHkAAAAAABAAAAAAAAAAAAAAAHwANQMAAAAA
+AAAAlyPmKwAAAAAAAAEAAAAEAAAAAAAAAAAAAABzAHkAAAAAABAAAAAAAAAAAAAAAHwANQMAAAAA
 BAAAAAAAAAAAAAAAcwDWAwAAAAAQAAAAAAAAAAAAAAB8AFIAAAAAAAAAAAABAAAA0gQAAAUAAgAA
 AABTVF8yNmI4ODI5NDQzODI0YmZhODBkMWYyZTYwMDBkODJmMABTVF8wZTEyZmY2MDdkNTM0OWFh
 YWRkMDY2MDliNmRhMTgyOQA8TW9kdWxlPgBNaWNyb3NvZnQuU3FsU2VydmVyLk1hbmFnZWREVFMA
@@ -4011,7 +4011,7 @@ AGkAbgBnAABlIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAA
 IABQAHIAbwBjAGUAcwBzAGkAbgBnACAAbwByAGcAYQBuAGkAegBhAHQAaQBvAG4AOgAgAAADIAAA
 cVMAVABfADAAZQAxADIAZgBmADYAMAA3AGQANQAzADQAOQBhAGEAYQBkAGQAMAA2ADYAMAA5AGIA
 NgBkAGEAMQA4ADIAOQAuAFAAcgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAA
-AAAX7Dzh0f6xQ7+E/asNwZppAAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFRBgcEDg4OAgMAAA4G
+AAD2KUjBVnOlTrDfvrMKkC3jAAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFRBgcEDg4OAgMAAA4G
 AAMODg4OBCAAEmkEIAASbQUgARJxHAMgABwDIAAOBCAAEnUFAAEOHQ4CBg4KIAYBCA4ODggQAgYA
 ARJ5EX0FIAASgIEHIAIBDhKAgQi3elxWGTTgiQiJhF3NgIDMkQQAAAAABAEAAAADBhJJAwYSTQMG
 EhACBggDBhEUBAAAEkkEAAASTQUAAQESTQQAABIQAwAAAQQIABJJBAgAEk0ECAASEAgBAAgAAAAA
@@ -4033,14 +4033,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAA
 AEgAAABYQAAAGgQAAAAAAAAAAAAAGgQ0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8A
-AAAAAL0E7/4AAAEAAAABAIRFiyMAAAEAhEWLIz8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABE
+AAAAAL0E7/4AAAEAAAABAOYrlyMAAAEA5iuXIz8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABE
 AAAAAQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8A
 bgAAAAAAAACwBHoDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAAFYDAAABADAAMAAw
 ADAAMAA0AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAiAAEAAQBDAG8AbQBwAGEA
 bgB5AE4AYQBtAGUAAAAAAAAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAA
 AAAAUwBUAF8AMABlADEAMgBmAGYANgAwADcAZAA1ADMANAA5AGEAYQBhAGQAZAAwADYANgAwADkA
 YgA2AGQAYQAxADgAMgA5AAAAPgAPAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAu
-ADkAMAA5ADkALgAxADcANwA5ADYAAAAAAHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAA
+ADkAMQAxADEALgAxADEAMgAzADgAAAAAAHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAA
 UwBUAF8AMgA2AGIAOAA4ADIAOQA0ADQAMwA4ADIANABiAGYAYQA4ADAAZAAxAGYAMgBlADYAMAAw
 ADAAZAA4ADIAZgAwAC4AZABsAGwAAABIABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQA
 AABDAG8AcAB5AHIAaQBnAGgAdAAgAEAAIAAgADIAMAAyADQAAAAqAAEAAQBMAGUAZwBhAGwAVABy
@@ -4049,8 +4049,8 @@ YQBtAGUAAABTAFQAXwAyADYAYgA4ADgAMgA5ADQANAAzADgAMgA0AGIAZgBhADgAMABkADEAZgAy
 AGUANgAwADAAMABkADgAMgBmADAALgBkAGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQATgBhAG0A
 ZQAAAAAAUwBUAF8AMABlADEAMgBmAGYANgAwADcAZAA1ADMANAA5AGEAYQBhAGQAZAAwADYANgAw
 ADkAYgA2AGQAYQAxADgAMgA5AAAAQgAPAAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBuAAAA
-MQAuADAALgA5ADAAOQA5AC4AMQA3ADcAOQA2AAAAAABGAA8AAQBBAHMAcwBlAG0AYgBsAHkAIABW
-AGUAcgBzAGkAbwBuAAAAMQAuADAALgA5ADAAOQA5AC4AMQA3ADcAOQA2AAAAAAAAAAAAAAAAAAAA
+MQAuADAALgA5ADEAMQAxAC4AMQAxADIAMwA4AAAAAABGAA8AAQBBAHMAcwBlAG0AYgBsAHkAIABW
+AGUAcgBzAGkAbwBuAAAAMQAuADAALgA5ADEAMQAxAC4AMQAxADIAMwA4AAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -4074,7 +4074,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
               DTS:refId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities"
               DTS:CreationName="Microsoft.Pipeline"
               DTS:Description="Data Flow Task"
-              DTS:DTSID="{F4D848E3-3B69-4ED6-8EA7-0E37B7A7AF7E}"
+              DTS:DTSID="{FB3AD703-08AD-4BFC-8460-1F0FA90B2294}"
               DTS:ExecutableType="Microsoft.Pipeline"
               DTS:LocaleID="-1"
               DTS:ObjectName="Upsert - Entities"
@@ -5931,7 +5931,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
                       contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;13"
                       description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
                       name="Script Component"
-                      version="13">
+                      version="11">
                       <properties>
                         <property
                           dataType="System.String"
@@ -7572,7 +7572,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               dataType="str"
                               length="50"
                               lineageId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\Script Component.Outputs[ParsedColumns].Columns[SelfProprietorsName]"
-                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\940:invalid"
+                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\958:invalid"
                               name="SelfProprietorsName" />
                             <outputColumn
                               refId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\Script Component.Outputs[ParsedColumns].Columns[AlternateLicenseNumber]"
@@ -7612,7 +7612,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               dataType="str"
                               length="50"
                               lineageId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\Script Component.Outputs[ParsedColumns].Columns[SecondaryStatus]"
-                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\941:invalid"
+                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\959:invalid"
                               name="SecondaryStatus" />
                             <outputColumn
                               refId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\Script Component.Outputs[ParsedColumns].Columns[PrimaryStatus]"
@@ -7620,7 +7620,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               dataType="str"
                               length="50"
                               lineageId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\Script Component.Outputs[ParsedColumns].Columns[PrimaryStatus]"
-                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\942:invalid"
+                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\960:invalid"
                               name="PrimaryStatus" />
                             <outputColumn
                               refId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\Script Component.Outputs[ParsedColumns].Columns[LicenseNumber]"
@@ -7628,7 +7628,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               dataType="str"
                               length="20"
                               lineageId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\Script Component.Outputs[ParsedColumns].Columns[LicenseNumber]"
-                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\943:invalid"
+                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\961:invalid"
                               name="LicenseNumber" />
                             <outputColumn
                               refId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\Script Component.Outputs[ParsedColumns].Columns[County]"
@@ -7636,7 +7636,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               dataType="str"
                               length="100"
                               lineageId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\Script Component.Outputs[ParsedColumns].Columns[County]"
-                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\944:invalid"
+                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\962:invalid"
                               name="County" />
                             <outputColumn
                               refId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\Script Component.Outputs[ParsedColumns].Columns[Zip]"
@@ -7644,7 +7644,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               dataType="str"
                               length="50"
                               lineageId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\Script Component.Outputs[ParsedColumns].Columns[Zip]"
-                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\945:invalid"
+                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\963:invalid"
                               name="Zip" />
                             <outputColumn
                               refId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\Script Component.Outputs[ParsedColumns].Columns[State]"
@@ -7652,7 +7652,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               dataType="str"
                               length="50"
                               lineageId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\Script Component.Outputs[ParsedColumns].Columns[State]"
-                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\946:invalid"
+                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\964:invalid"
                               name="State" />
                             <outputColumn
                               refId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\Script Component.Outputs[ParsedColumns].Columns[City]"
@@ -7660,7 +7660,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               dataType="str"
                               length="100"
                               lineageId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\Script Component.Outputs[ParsedColumns].Columns[City]"
-                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\947:invalid"
+                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\965:invalid"
                               name="City" />
                             <outputColumn
                               refId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\Script Component.Outputs[ParsedColumns].Columns[Address3]"
@@ -7684,7 +7684,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               dataType="str"
                               length="100"
                               lineageId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\Script Component.Outputs[ParsedColumns].Columns[Address1]"
-                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\948:invalid"
+                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\966:invalid"
                               name="Address1" />
                             <outputColumn
                               refId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\Script Component.Outputs[ParsedColumns].Columns[Rank]"
@@ -7700,7 +7700,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               dataType="str"
                               length="100"
                               lineageId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\Script Component.Outputs[ParsedColumns].Columns[DBAName]"
-                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\949:invalid"
+                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\967:invalid"
                               name="DBAName" />
                             <outputColumn
                               refId="Package\Foreach Loop Container\Sequence Container\Upsert - Entities\Script Component.Outputs[ParsedColumns].Columns[LicenseeName]"
@@ -11816,7 +11816,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               DTS:refId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals"
               DTS:CreationName="Microsoft.Pipeline"
               DTS:Description="Data Flow Task"
-              DTS:DTSID="{DB148B0B-B77F-4019-87C0-49EA1B5E9583}"
+              DTS:DTSID="{817C64DB-A990-4D88-ABCB-26B42F2BDA09}"
               DTS:ExecutableType="Microsoft.Pipeline"
               DTS:LocaleID="-1"
               DTS:ObjectName="Upsert - Individuals"
@@ -13709,7 +13709,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;13"
                       description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
                       name="Script Component"
-                      version="13">
+                      version="11">
                       <properties>
                         <property
                           dataType="System.String"
@@ -15350,7 +15350,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               dataType="str"
                               length="100"
                               lineageId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\Script Component.Outputs[ParsedColumns].Columns[SelfProprietorsName]"
-                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\950:invalid"
+                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\968:invalid"
                               name="SelfProprietorsName" />
                             <outputColumn
                               refId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\Script Component.Outputs[ParsedColumns].Columns[AlternateLicenseNumber]"
@@ -15390,7 +15390,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               dataType="str"
                               length="50"
                               lineageId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\Script Component.Outputs[ParsedColumns].Columns[SecondaryStatus]"
-                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\951:invalid"
+                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\969:invalid"
                               name="SecondaryStatus" />
                             <outputColumn
                               refId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\Script Component.Outputs[ParsedColumns].Columns[PrimaryStatus]"
@@ -15398,7 +15398,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               dataType="str"
                               length="50"
                               lineageId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\Script Component.Outputs[ParsedColumns].Columns[PrimaryStatus]"
-                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\952:invalid"
+                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\970:invalid"
                               name="PrimaryStatus" />
                             <outputColumn
                               refId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\Script Component.Outputs[ParsedColumns].Columns[LicenseNumber]"
@@ -15406,7 +15406,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               dataType="str"
                               length="20"
                               lineageId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\Script Component.Outputs[ParsedColumns].Columns[LicenseNumber]"
-                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\953:invalid"
+                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\971:invalid"
                               name="LicenseNumber" />
                             <outputColumn
                               refId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\Script Component.Outputs[ParsedColumns].Columns[County]"
@@ -15414,7 +15414,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               dataType="str"
                               length="100"
                               lineageId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\Script Component.Outputs[ParsedColumns].Columns[County]"
-                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\954:invalid"
+                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\972:invalid"
                               name="County" />
                             <outputColumn
                               refId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\Script Component.Outputs[ParsedColumns].Columns[Zip]"
@@ -15422,7 +15422,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               dataType="str"
                               length="20"
                               lineageId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\Script Component.Outputs[ParsedColumns].Columns[Zip]"
-                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\955:invalid"
+                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\973:invalid"
                               name="Zip" />
                             <outputColumn
                               refId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\Script Component.Outputs[ParsedColumns].Columns[State]"
@@ -15430,7 +15430,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               dataType="str"
                               length="50"
                               lineageId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\Script Component.Outputs[ParsedColumns].Columns[State]"
-                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\956:invalid"
+                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\974:invalid"
                               name="State" />
                             <outputColumn
                               refId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\Script Component.Outputs[ParsedColumns].Columns[City]"
@@ -15438,7 +15438,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               dataType="str"
                               length="100"
                               lineageId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\Script Component.Outputs[ParsedColumns].Columns[City]"
-                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\957:invalid"
+                              mappedColumnId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\975:invalid"
                               name="City" />
                             <outputColumn
                               refId="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals\Script Component.Outputs[ParsedColumns].Columns[Address3]"
@@ -19703,7 +19703,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             <DTS:PrecedenceConstraint
               DTS:refId="Package\Foreach Loop Container\Sequence Container.PrecedenceConstraints[Constraint]"
               DTS:CreationName=""
-              DTS:DTSID="{10CC3DB5-89F3-4EC7-BD18-DAD22EE4E323}"
+              DTS:DTSID="{132B8A74-0480-4FA3-9DB6-EB965C65B1E1}"
               DTS:From="Package\Foreach Loop Container\Sequence Container\Upsert - Entities"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Constraint"
@@ -19711,7 +19711,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             <DTS:PrecedenceConstraint
               DTS:refId="Package\Foreach Loop Container\Sequence Container.PrecedenceConstraints[Constraint 1]"
               DTS:CreationName=""
-              DTS:DTSID="{BBFFC89E-0579-435F-BDA5-BC1C9FF718AA}"
+              DTS:DTSID="{5F800F72-D45C-4E80-9F96-CB76893C1775}"
               DTS:From="Package\Foreach Loop Container\Sequence Container\Upsert - Individuals"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Constraint 1"
@@ -19719,7 +19719,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             <DTS:PrecedenceConstraint
               DTS:refId="Package\Foreach Loop Container\Sequence Container.PrecedenceConstraints[Constraint 2]"
               DTS:CreationName=""
-              DTS:DTSID="{8A468E42-4F20-4280-A563-FF9E58FC3D87}"
+              DTS:DTSID="{555F5676-8EF4-41FB-A03B-EAFBDA525D8F}"
               DTS:From="Package\Foreach Loop Container\Sequence Container\Log orgName in Console"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Constraint 2"
@@ -19730,14 +19730,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{4A2BF0D0-B34B-4860-97FD-582582899B73}"
-          DTS:ObjectName="{4A2BF0D0-B34B-4860-97FD-582582899B73}"
+          DTS:DTSID="{08DB7FD2-D40D-46D3-A624-1A2B00EDB1A8}"
+          DTS:ObjectName="{08DB7FD2-D40D-46D3-A624-1A2B00EDB1A8}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::orgPrefix" />
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{265AAFE9-6F1E-4EE8-93B5-107D54DFB82F}"
-          DTS:ObjectName="{265AAFE9-6F1E-4EE8-93B5-107D54DFB82F}"
+          DTS:DTSID="{25D7DB75-B4FC-4D64-89DE-F404E6801FD9}"
+          DTS:ObjectName="{25D7DB75-B4FC-4D64-89DE-F404E6801FD9}"
           DTS:ValueIndex="1"
           DTS:VariableName="User::orgGUID" />
       </DTS:ForEachVariableMappings>
@@ -19746,7 +19746,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:refId="Package\Retrieve DBPR Files"
       DTS:CreationName="Microsoft.ScriptTask"
       DTS:Description="Script Task"
-      DTS:DTSID="{50B315E8-1FEA-4CAF-BB5E-BC5280262A31}"
+      DTS:DTSID="{E6A39E34-9301-408A-9B9F-36FD46C9B530}"
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Retrieve DBPR Files"
@@ -19755,19 +19755,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <DTS:ObjectData>
         <ScriptProject
           Name="ST_8b660b8b4d1b4b988325d0b7ebfeb351"
-          VSTAMajorVersion="16"
+          VSTAMajorVersion="15"
           VSTAMinorVersion="0"
           Language="CSharp"
           ReadOnlyVariables="$Project::FL_filePath_Entity,$Project::FL_filePath_Licensee,$Project::FL_sourceURL_Entity,$Project::FL_sourceURL_Licensee">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_6695470d6e2742e08615e380f75d68bb")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_6695470d6e2742e08615e380f75d68bb")]
+[assembly: AssemblyCopyright("Copyright @  2024")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -20237,35 +20258,14 @@ namespace ST_6695470d6e2742e08615e380f75d68bb.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_6695470d6e2742e08615e380f75d68bb")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_6695470d6e2742e08615e380f75d68bb")]
-[assembly: AssemblyCopyright("Copyright @  2024")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -20478,7 +20478,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{3AE3631B-2C4A-4DD4-BABD-8E5147467CFB}"
+      DTS:DTSID="{9B9EADAF-5FFC-41B9-BC41-43E8C5962E92}"
       DTS:From="Package\Retrieve DBPR Files"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -20503,7 +20503,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="200,42"
           Id="Package\Foreach Loop Container\Sequence Container\Log orgName in Console"
-          TopLeft="28,5.5" />
+          TopLeft="28,0.5" />
         <NodeLayout
           Size="157,42"
           Id="Package\Foreach Loop Container\Sequence Container\Upsert - Entities"
@@ -20558,18 +20558,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container\Sequence Container.PrecedenceConstraints[Constraint 2]"
-          TopLeft="127,47.5">
+          TopLeft="127,42.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33.5"
+              EndConnector="0,38.5"
               Start="0,0"
-              End="0,26">
+              End="0,31">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26" />
+                    End="0,31" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -20581,15 +20581,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="234,287"
-          Size="234,330"
+          PanelSize="234,321"
+          Size="234,364"
           Id="Package\Foreach Loop Container\Sequence Container"
           TopLeft="142.5,18.5" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="473,384"
-          Size="473,427"
+          PanelSize="473,438"
+          Size="473,480"
           Id="Package\Foreach Loop Container"
           TopLeft="424.833333333332,217.936507936508" />
         <NodeLayout
@@ -21089,9 +21089,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-24.80947265625,34.6357421875,49.6189453125,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21113,9 +21111,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-5.77107668288005,5,55.708828125,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21137,9 +21133,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-25.0951171875,25.885740570724,50.190234375,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21161,9 +21155,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="38.103918392285,5,55.708828125,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21185,9 +21177,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-27.8544140625,70.766118531586,55.708828125,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21210,7 +21200,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-27.80674029291,5,107.6134765625,11.609375"
+              BoundingBox="-27.80674029291,5,42.3538671875,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -21233,9 +21223,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-25.0951171875,19.510743804276,50.190234375,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21257,9 +21245,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-153.26177863814,5,50.190234375,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21293,9 +21279,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-202.100240885416,69.7082664526485,31.1171484375,9.421875"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21317,9 +21301,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-27.8544140625,19.3857398852705,55.708828125,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21341,9 +21323,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-27.8544140625,67.2970325100805,55.708828125,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21377,9 +21357,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-45.4701171875,89.625,50.190234375,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21401,9 +21379,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-24.80947265625,10.7885199652778,49.6189453125,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21425,9 +21401,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-25.0951171875,59.0107421875,50.190234375,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21449,9 +21423,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-27.8544140625,26.8440756027896,55.708828125,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21474,7 +21446,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-100.2042578125,42.7959007397295,200.408515625,11.658203125"
+              BoundingBox="-100.2042578125,42.7959007397295,141.2278125,11.658203125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
