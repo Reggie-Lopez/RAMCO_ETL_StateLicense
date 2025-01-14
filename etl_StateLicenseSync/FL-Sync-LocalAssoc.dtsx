@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="sync - FL prod"
   DTS:PackageType="5"
-  DTS:VersionBuild="311"
-  DTS:VersionGUID="{63F99B01-541A-4A42-9186-79DFA9FBBA20}">
+  DTS:VersionBuild="312"
+  DTS:VersionGUID="{1DC34009-CD4B-4BCF-9F1D-AD8FABDCB03E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -91,7 +91,7 @@
           ConnectByProxy="False">
           <ServerPassword
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmMDM6mTb20Sn+XhEPCYEWQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAeuBkIALJwWHPG0t0WPCHh2rRJZa2M2CaE7Ii2YZCavAAAAAAOgAAAAAIAACAAAAB2lmfxEgj/W/pcZ7XyUMy/WKEOLCm4Jgx0mrvVzanZQiAAAADpofuZXvBqP1ZjmGkwoYtC9cD3hJ9xOToWDFCy6vt+C0AAAADoIGXhvmANBOKG3gKYExEYVztQUT6pnow1YpHecb5vTLOG7b44tA1gfhc4casmTjBPOciVOgZhoSrfTuc1970C</ServerPassword>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmMDM6mTb20Sn+XhEPCYEWQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADYYXGqPQZYjTjtCekq01Yn/5s0uauSgF8cP5n+/asyZAAAAAAOgAAAAAIAACAAAABLpgmjkUQRNabPSjPewei3cFOT1vjw/585kt2GOZrvXyAAAACrZiEVKg/DX67ORHliVjw+LZRr8tLNUrCGLgJ5LuT1UkAAAADLueFbeAlFcv/TTHUwtKpnB4UFtm1/yvfZafF91d+ucAjegmL2aNLN4MYvH7fQtgmswCGCDHeJL83F23OQuaJm</ServerPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -106,7 +106,7 @@
           ConnectByProxy="False">
           <ServerPassword
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmMDM6mTb20Sn+XhEPCYEWQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACPNbjlulRZRc8H3MAm8Fsrm62JRpbMKKURE6J0CtpZXwAAAAAOgAAAAAIAACAAAAA1bSBmyRhUuAlpGfEMLd8mYInJibyD256IoXueTY9BRSAAAADJ0y2+IcN7B61WAkUbWjgW2iidjTsUg6HAOnzVbCigpEAAAAB+cJ7HnBq/Mlld+Tt/M199hbloeddRZX/AKa0RnYiYvvW8UpaBaWkaSiiHdOSf6yPwB9iWn6sG1RhFj5VJDU1b</ServerPassword>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmMDM6mTb20Sn+XhEPCYEWQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADnPZDpakdhmy+LPgJ9MV6Umr9mnv9mPlUyiuDPiFAT0QAAAAAOgAAAAAIAACAAAAAle0cIzwihVRIRZyzyWlHvjWicpope3V8emrB9D3L5YyAAAAAWUT5xe7pBq/B/Ax7twlLJSiQRrMb62Vurq4VDwieW1EAAAABnikYYMPrRTvhgJqsOA5tWE9L90uUz/ClhWZc+LNVs9y80MpEuN3+RWkktqnXFxY0mZhGjODJKrtF4+IANgwvb</ServerPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
