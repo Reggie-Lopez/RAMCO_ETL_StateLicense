@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:DelayValidation="True"
+  DTS:ObjectName="RAMCO-Customer"
+  DTS:DTSID="{C570B595-B470-415D-8074-FC32B35967B0}"
+  DTS:CreationName="DYNAMICS-CRM">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">@[User::connectionString]</DTS:PropertyExpression>
+  <DTS:PropertyExpression
+    DTS:Name="OrganizationName">@[User::orgName]</DTS:PropertyExpression>
+  <DTS:PropertyExpression
+    DTS:Name="ServerHost">@[User::orgURL]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <ConnectionManager
+      ConnectionString="DeploymentType=Crm2011;ServerHost=https://newportcrm.ramcoams.org/;ServerUser=reggie.lopez@ramco.ams;OrganizationName=NEWPORTCRM (NEWPORTCRM);ServerTimeout=100;RetainSameConnection=True;Compression=False;ConnectionSharing=False;CallerId=;OrganizationUrl=;ProxyHost=;ProxyPort=0;ProxyUser=;"
+      ConnectByProxy="False">
+      <ServerPassword
+        Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIwy20GgZLESH9GFnN7CznQAAAAACAAAAAAAQZgAAAAEAACAAAABI/PJRk1U9htS2sf4otobvMDl/wMdgIU8cj6QstbVslAAAAAAOgAAAAAIAACAAAABNaX8HayTFnwQ5kijBWzdK7dsWLhxiQTeG4oLbrO5eZ3AAAACtEk/tbQ16++FljGZZLqEnURQmKokCTKanBlzyWsb/NTbO5uCzZISHuE6vplcUo7c4hbfjjZePx4NNnmPOrGoLefTFPzRtqFrw1zblDNmqEPEJzfXQdmjzcAwpJe7BwwUv4BzsLF7VRkMF2wtJkZfPQAAAAH78WxPLtP4mB7rJymZXHCf4IJH5hLq01swrBvhlJnNS1Q2cK+fDHS1E+JN+nxAJY9BXkNm/eYu3f1K9GFb3z08=</ServerPassword>
+    </ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

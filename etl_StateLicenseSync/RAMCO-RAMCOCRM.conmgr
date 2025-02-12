@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:DelayValidation="True"
+  DTS:ObjectName="RAMCO-RAMCOCRM"
+  DTS:DTSID="{41e11a97-5d85-4abf-b1cd-45f346f5281f}"
+  DTS:CreationName="DYNAMICS-CRM">
+  <DTS:ObjectData>
+    <ConnectionManager
+      ConnectionString="DeploymentType=Crm2011;ServerHost=https://ramcocrm.ramcoams.org/;ServerUser=reggie.lopez@ramco.ams;OrganizationName=RAMCOCRM (RAMCOCRM);ServerTimeout=100;RetainSameConnection=True;Compression=False;ConnectionSharing=False;CallerId=;OrganizationUrl=;ProxyHost=;ProxyPort=0;ProxyUser=;"
+      ConnectByProxy="False">
+      <ServerPassword
+        Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIwy20GgZLESH9GFnN7CznQAAAAACAAAAAAAQZgAAAAEAACAAAACum+mt22II7ZDHO8BS3r1U5g+h7tRbLwSfjVoodvP6pwAAAAAOgAAAAAIAACAAAADF/VmJJWWdM/SXfUqxpx4WhIXyKYF7NsLGdWKpEOX+i3AAAADA7ai/foiFXQSpYcyPDx3tPPYePAXufBgyUhmIK9I2ya3BSjrVjvH6SjT3BarWn+sySsWrIJj0mf3BVKfos6fV/lx9chPiuz8y2VZKhwFPRbqWZ0gFz/YHEKUw93sxrAPkzSBGF3ZWNey6+SvdNPKPQAAAABbYPM306U0ofkgUcar4mVyqCREopgKhqdWQuRpHAEZU+g5hUK0hSxVcDMhW3potE7TtLx6QSWv6TCEBWtjnvpU=</ServerPassword>
+    </ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

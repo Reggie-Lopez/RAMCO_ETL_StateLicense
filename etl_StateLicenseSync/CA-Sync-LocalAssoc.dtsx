@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="sync - CA"
   DTS:PackageType="5"
-  DTS:VersionBuild="205"
-  DTS:VersionGUID="{E16543B3-CAA6-4C73-A3BF-BED34E31CEA1}">
+  DTS:VersionBuild="206"
+  DTS:VersionGUID="{444D2B36-42CF-49D1-AF28-BA3A3286D4FB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -260,72 +260,6 @@
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[HTTP Connection Manager]"
-      DTS:CreationName="HTTP (KingswaySoft)"
-      DTS:DTSID="{B2067EB7-87E4-483D-A904-15A44369DE8A}"
-      DTS:ObjectName="HTTP Connection Manager">
-      <DTS:ObjectData>
-        <ConnectionManager
-          ConnectionString="BaseUrl=https://secure.dre.ca.gov/datafile/CurrList.zip;AuthenticationMode=Credentials;JwtClaims='{&#xA;  &quot;header&quot;: {},&#xA;  &quot;payload&quot;: {}&#xA;}';JwtKeyFile=;CustomTokenCurlFile=;CustomTokenFindStrategy=JPath;CustomTokenFindExpression=;CustomTokenExpiry=0;AwsSignatureVersion=Version4;AwsSignatureMethod=HmacSHA1;AwsAccessKey=;AwsRegion=;AwsServiceName=;AzureOAuthType=ClientCredentials;AzureTenantId=;AzureClientId=;AzureCertificateLocation=Store;AzureCertificateThumbprint=;AzurePathToCertificate=;GoogleServiceAccount=;GoogleCertificateLocation=Store;GoogleCertificateThumbprint=;GooglePathToCertificate=;GoogleScope=;AzureScope=;PathToTokenFile=;AccessTokenRequestLocation=HttpHeader;Domain=;UserName=;ProxyMode=NoProxy;ProxyUsername=;ProxyServer=;ProxyServerPort=0;ThrottleRate=0;ThrottleRateUnit=PerSecond;ServiceTimeout=120;RetryOnIntermittentErrors=True;AllowAutoRedirect=True;DropAuthorizationHeaderOnRedirects=False;ChunkSize=0;CertificateLocation=Store;CertificateThumbprint=;PathToCertificate=;IgnoreCertificateErrors=False;CustomHeaders='{&#xA;  &quot;User-Agent&quot;: {&#xA;    &quot;value&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) SSIS Productivity Pack by KingswaySoft (like Gecko)&quot;&#xA;  },&#xA;  &quot;Accept-Encoding&quot;: {&#xA;    &quot;value&quot;: &quot;gzip, deflate&quot;&#xA;  }&#xA;}';HttpMethod=POST;ErrorCodes='[{&quot;code&quot;:&quot;408&quot;,&quot;retryable&quot;:true},{&quot;code&quot;:&quot;500&quot;,&quot;retryable&quot;:false},{&quot;code&quot;:&quot;502&quot;,&quot;retryable&quot;:true},{&quot;code&quot;:&quot;503&quot;,&quot;retryable&quot;:true},{&quot;code&quot;:&quot;504&quot;,&quot;retryable&quot;:true}]'"
-          ConnectByProxy="False" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[RAMCO]"
-      DTS:CreationName="DynamicsCRM"
-      DTS:DTSID="{C435F4A9-639B-4A80-AFAD-34050E142B40}"
-      DTS:ObjectName="RAMCO">
-      <DTS:PropertyExpression
-        DTS:Name="ServerUrl">"https://" + @[User::orgName]  + "crm.ramcoams.org"</DTS:PropertyExpression>
-      <DTS:ObjectData>
-        <CrmConnectionManager
-          ConnectionString="AuthenticationType=Federation;ServiceEndpoint=Soap2011;UserName=reggie.lopez@ramco.ams;Domain=;ServerUrl=&quot;https://NEWPORTCRM (NEWPORTCRM)crm.ramcoams.org&quot;;ProxyUsername=;ProxyMode=NoProxy;ProxyServer=;ProxyServerPort=0;BypassProxyOnLocal=False;HomeRealmUri=;ApiVersion=;ServiceTimeout=120;RetryOnIntermittentErrors=True;IgnoreCertificateErrors=False;TimezoneConversionEngine=Auto"
-          ConnectByProxy="False">
-          <Password
-            Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIwy20GgZLESH9GFnN7CznQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACZVYKY4Mgqi17OvTvCH2KAgddQYISutw4i0xuoafJrJAAAAAAOgAAAAAIAACAAAADuoUDVbgEZ1ZLeHI+MGqcwJjzMHJKUXaQUsa1JsssC9iAAAAADo2zdV6mCaZXSCR9zAM72ztJqIxKzH9nZ4AjBizKr/0AAAAC3BDSsNrHbiNPvIZHbKQP+gp0jTwW2U4JHZdQw1fMGjD2+HxIx8Dfn/t5OPqlqflvY9WLKOxVGIkuXweBuSZ/M</Password>
-        </CrmConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[RAMCO-Customer]"
-      DTS:CreationName="DYNAMICS-CRM"
-      DTS:DelayValidation="True"
-      DTS:DTSID="{C570B595-B470-415D-8074-FC32B35967B0}"
-      DTS:ObjectName="RAMCO-Customer">
-      <DTS:PropertyExpression
-        DTS:Name="ConnectionString">@[User::connectionString]</DTS:PropertyExpression>
-      <DTS:PropertyExpression
-        DTS:Name="OrganizationName">@[User::orgName]</DTS:PropertyExpression>
-      <DTS:PropertyExpression
-        DTS:Name="ServerHost">@[User::orgURL]</DTS:PropertyExpression>
-      <DTS:ObjectData>
-        <ConnectionManager
-          ConnectionString="DeploymentType=Crm2011;ServerHost=https://newportcrm.ramcoams.org/;ServerUser=reggie.lopez@ramco.ams;OrganizationName=NEWPORTCRM (NEWPORTCRM);ServerTimeout=100;RetainSameConnection=True;Compression=False;ConnectionSharing=False;CallerId=;OrganizationUrl=;ProxyHost=;ProxyPort=0;ProxyUser=;"
-          ConnectByProxy="False">
-          <ServerPassword
-            Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIwy20GgZLESH9GFnN7CznQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABRN4hFSemLYvRUqUp6Ir8POmpSZBH+UrG7jyda3y1dJwAAAAAOgAAAAAIAACAAAAAsMZAYaG9pkxB9oERUDkJIcVsLYSxchkREIxQ4Nt/yPyAAAACdY9EcCsMlx9rrjPlnd9UDS6bL1RggiC+axNHkFa2rgUAAAADex9e57H7/5qM+XUHIW43i6wvgZpjYBoWwPwx6IeUzq4hrVlwCMrdKAkCVXqwQr4dCFPmwJPng2ZHfu4nurcAP</ServerPassword>
-        </ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[RAMCO-RAMCOCRM]"
-      DTS:CreationName="DYNAMICS-CRM"
-      DTS:DelayValidation="True"
-      DTS:DTSID="{41e11a97-5d85-4abf-b1cd-45f346f5281f}"
-      DTS:ObjectName="RAMCO-RAMCOCRM">
-      <DTS:ObjectData>
-        <ConnectionManager
-          ConnectionString="DeploymentType=Crm2011;ServerHost=https://ramcocrm.ramcoams.org/;ServerUser=reggie.lopez@ramco.ams;OrganizationName=RAMCOCRM (RAMCOCRM);ServerTimeout=100;RetainSameConnection=True;Compression=False;ConnectionSharing=False;CallerId=;OrganizationUrl=;ProxyHost=;ProxyPort=0;ProxyUser=;"
-          ConnectByProxy="False">
-          <ServerPassword
-            Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIwy20GgZLESH9GFnN7CznQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACBGeTp3PNfnPh56byk3t7GIsM55AeNU8UG67fi96AGlAAAAAAOgAAAAAIAACAAAABn4wM63MgF+6H8KYpX8TOyR/U9nArrIrCVNDgnKxOlFyAAAADqs/y2LrNbZsCAztwkPfpgn5Mdd1g6THxrSEBsUEs2uEAAAABt02/+iNkQ6r/aO/xogXTEtzieYOJSZLPjllVuj8QHhRP3/7TkNFWSkwASioM5e+0IH7KLy0ODNhvdXAZ0zj6Z</ServerPassword>
-        </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -827,8 +761,8 @@
               <connections>
                 <connection
                   refId="Package\Associate\Dynamics CRM Destination.Connections[DYNAMICS-CRM]"
-                  connectionManagerID="Package.ConnectionManagers[RAMCO-Customer]"
-                  connectionManagerRefId="Package.ConnectionManagers[RAMCO-Customer]"
+                  connectionManagerID="{C570B595-B470-415D-8074-FC32B35967B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[RAMCO-Customer]"
                   description="Dynamics CRM Connection"
                   name="DYNAMICS-CRM" />
               </connections>
@@ -1912,8 +1846,8 @@
               <connections>
                 <connection
                   refId="Package\Associate\Dynamics CRM Destination 1.Connections[DYNAMICS-CRM]"
-                  connectionManagerID="Package.ConnectionManagers[RAMCO-Customer]"
-                  connectionManagerRefId="Package.ConnectionManagers[RAMCO-Customer]"
+                  connectionManagerID="{C570B595-B470-415D-8074-FC32B35967B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[RAMCO-Customer]"
                   description="Dynamics CRM Connection"
                   name="DYNAMICS-CRM" />
               </connections>
@@ -2297,8 +2231,8 @@
               <connections>
                 <connection
                   refId="Package\Associate\Dynamics CRM Source.Connections[DYNAMICS-CRM]"
-                  connectionManagerID="Package.ConnectionManagers[RAMCO-Customer]"
-                  connectionManagerRefId="Package.ConnectionManagers[RAMCO-Customer]"
+                  connectionManagerID="{C570B595-B470-415D-8074-FC32B35967B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[RAMCO-Customer]"
                   description="Dynamics CRM Connection Manager"
                   name="DYNAMICS-CRM" />
               </connections>
@@ -2398,8 +2332,8 @@
               <connections>
                 <connection
                   refId="Package\Associate\Dynamics CRM Source 1.Connections[DYNAMICS-CRM]"
-                  connectionManagerID="Package.ConnectionManagers[RAMCO-Customer]"
-                  connectionManagerRefId="Package.ConnectionManagers[RAMCO-Customer]"
+                  connectionManagerID="{C570B595-B470-415D-8074-FC32B35967B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[RAMCO-Customer]"
                   description="Dynamics CRM Connection Manager"
                   name="DYNAMICS-CRM" />
               </connections>
@@ -2524,8 +2458,8 @@
               <connections>
                 <connection
                   refId="Package\Associate\Dynamics CRM Source 2.Connections[DYNAMICS-CRM]"
-                  connectionManagerID="Package.ConnectionManagers[RAMCO-Customer]"
-                  connectionManagerRefId="Package.ConnectionManagers[RAMCO-Customer]"
+                  connectionManagerID="{C570B595-B470-415D-8074-FC32B35967B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[RAMCO-Customer]"
                   description="Dynamics CRM Connection Manager"
                   name="DYNAMICS-CRM" />
               </connections>
@@ -3621,8 +3555,8 @@
               <connections>
                 <connection
                   refId="Package\Initiate - Org Sync\Dynamics CRM Destination.Connections[DYNAMICS-CRM]"
-                  connectionManagerID="Package.ConnectionManagers[RAMCO-RAMCOCRM]"
-                  connectionManagerRefId="Package.ConnectionManagers[RAMCO-RAMCOCRM]"
+                  connectionManagerID="{41e11a97-5d85-4abf-b1cd-45f346f5281f}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[RAMCO-RAMCOCRM]"
                   description="Dynamics CRM Connection"
                   name="DYNAMICS-CRM" />
               </connections>
@@ -3878,8 +3812,8 @@
               <connections>
                 <connection
                   refId="Package\Initiate - Org Sync\Get - Integration Tracking Record.Connections[DYNAMICS-CRM]"
-                  connectionManagerID="Package.ConnectionManagers[RAMCO-RAMCOCRM]"
-                  connectionManagerRefId="Package.ConnectionManagers[RAMCO-RAMCOCRM]"
+                  connectionManagerID="{41e11a97-5d85-4abf-b1cd-45f346f5281f}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[RAMCO-RAMCOCRM]"
                   description="Dynamics CRM Connection Manager"
                   name="DYNAMICS-CRM" />
               </connections>
@@ -5588,8 +5522,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\Update License Status\Dynamics CRM Destination.Connections[DYNAMICS-CRM]"
-                  connectionManagerID="Package.ConnectionManagers[RAMCO-Customer]"
-                  connectionManagerRefId="Package.ConnectionManagers[RAMCO-Customer]"
+                  connectionManagerID="{C570B595-B470-415D-8074-FC32B35967B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[RAMCO-Customer]"
                   description="Dynamics CRM Connection"
                   name="DYNAMICS-CRM" />
               </connections>
@@ -5909,8 +5843,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\Update License Status\Dynamics CRM Source 1.Connections[DYNAMICS-CRM]"
-                  connectionManagerID="Package.ConnectionManagers[RAMCO-Customer]"
-                  connectionManagerRefId="Package.ConnectionManagers[RAMCO-Customer]"
+                  connectionManagerID="{C570B595-B470-415D-8074-FC32B35967B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[RAMCO-Customer]"
                   description="Dynamics CRM Connection Manager"
                   name="DYNAMICS-CRM" />
               </connections>
@@ -8300,8 +8234,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\Upsert Licenses\Dynamics CRM Source.Connections[DYNAMICS-CRM]"
-                  connectionManagerID="Package.ConnectionManagers[RAMCO-Customer]"
-                  connectionManagerRefId="Package.ConnectionManagers[RAMCO-Customer]"
+                  connectionManagerID="{C570B595-B470-415D-8074-FC32B35967B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[RAMCO-Customer]"
                   description="Dynamics CRM Connection Manager"
                   name="DYNAMICS-CRM" />
               </connections>
@@ -8449,8 +8383,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\Upsert Licenses\Dynamics CRM Source 1.Connections[DYNAMICS-CRM]"
-                  connectionManagerID="Package.ConnectionManagers[RAMCO-Customer]"
-                  connectionManagerRefId="Package.ConnectionManagers[RAMCO-Customer]"
+                  connectionManagerID="{C570B595-B470-415D-8074-FC32B35967B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[RAMCO-Customer]"
                   description="Dynamics CRM Connection Manager"
                   name="DYNAMICS-CRM" />
               </connections>
@@ -8608,8 +8542,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\Upsert Licenses\Dynamics CRM Source 1 1.Connections[DYNAMICS-CRM]"
-                  connectionManagerID="Package.ConnectionManagers[RAMCO-Customer]"
-                  connectionManagerRefId="Package.ConnectionManagers[RAMCO-Customer]"
+                  connectionManagerID="{C570B595-B470-415D-8074-FC32B35967B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[RAMCO-Customer]"
                   description="Dynamics CRM Connection Manager"
                   name="DYNAMICS-CRM" />
               </connections>
@@ -17758,8 +17692,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\Upsert Licenses\Upsert - Entites - Write to CRM.Connections[DYNAMICS-CRM]"
-                  connectionManagerID="Package.ConnectionManagers[RAMCO-Customer]"
-                  connectionManagerRefId="Package.ConnectionManagers[RAMCO-Customer]"
+                  connectionManagerID="{C570B595-B470-415D-8074-FC32B35967B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[RAMCO-Customer]"
                   description="Dynamics CRM Connection"
                   name="DYNAMICS-CRM" />
               </connections>
@@ -18296,8 +18230,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\Upsert Licenses\Upsert - Entites - Write to CRM 1.Connections[DYNAMICS-CRM]"
-                  connectionManagerID="Package.ConnectionManagers[RAMCO-Customer]"
-                  connectionManagerRefId="Package.ConnectionManagers[RAMCO-Customer]"
+                  connectionManagerID="{C570B595-B470-415D-8074-FC32B35967B0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[RAMCO-Customer]"
                   description="Dynamics CRM Connection"
                   name="DYNAMICS-CRM" />
               </connections>
@@ -19084,8 +19018,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\Write - Completion Time\Dynamics CRM Destination.Connections[DYNAMICS-CRM]"
-                  connectionManagerID="Package.ConnectionManagers[RAMCO-RAMCOCRM]"
-                  connectionManagerRefId="Package.ConnectionManagers[RAMCO-RAMCOCRM]"
+                  connectionManagerID="{41e11a97-5d85-4abf-b1cd-45f346f5281f}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[RAMCO-RAMCOCRM]"
                   description="Dynamics CRM Connection"
                   name="DYNAMICS-CRM" />
               </connections>
@@ -19339,8 +19273,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\Write - Completion Time\Get - Integration Tracking Record.Connections[DYNAMICS-CRM]"
-                  connectionManagerID="Package.ConnectionManagers[RAMCO-RAMCOCRM]"
-                  connectionManagerRefId="Package.ConnectionManagers[RAMCO-RAMCOCRM]"
+                  connectionManagerID="{41e11a97-5d85-4abf-b1cd-45f346f5281f}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[RAMCO-RAMCOCRM]"
                   description="Dynamics CRM Connection Manager"
                   name="DYNAMICS-CRM" />
               </connections>
@@ -21269,8 +21203,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
                   <connections>
                     <connection
                       refId="Package.EventHandlers[OnError]\Write - Completion Time\Dynamics CRM Destination.Connections[DYNAMICS-CRM]"
-                      connectionManagerID="Package.ConnectionManagers[RAMCO-RAMCOCRM]"
-                      connectionManagerRefId="Package.ConnectionManagers[RAMCO-RAMCOCRM]"
+                      connectionManagerID="{41e11a97-5d85-4abf-b1cd-45f346f5281f}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[RAMCO-RAMCOCRM]"
                       description="Dynamics CRM Connection"
                       name="DYNAMICS-CRM" />
                   </connections>
@@ -21518,8 +21452,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
                   <connections>
                     <connection
                       refId="Package.EventHandlers[OnError]\Write - Completion Time\Get - Integration Tracking Record.Connections[DYNAMICS-CRM]"
-                      connectionManagerID="Package.ConnectionManagers[RAMCO-RAMCOCRM]"
-                      connectionManagerRefId="Package.ConnectionManagers[RAMCO-RAMCOCRM]"
+                      connectionManagerID="{41e11a97-5d85-4abf-b1cd-45f346f5281f}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[RAMCO-RAMCOCRM]"
                       description="Dynamics CRM Connection Manager"
                       name="DYNAMICS-CRM" />
                   </connections>
