@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="sync - CA"
   DTS:PackageType="5"
-  DTS:VersionBuild="204"
-  DTS:VersionGUID="{82CFE53A-A66A-4213-8F3D-B59F2090B5A5}">
+  DTS:VersionBuild="205"
+  DTS:VersionGUID="{E16543B3-CAA6-4C73-A3BF-BED34E31CEA1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -286,13 +286,14 @@
           ConnectByProxy="False">
           <Password
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIwy20GgZLESH9GFnN7CznQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABtstuMO4a74i0nx6GeosYYtAaUzwN7hWufSVWfonXRtAAAAAAOgAAAAAIAACAAAAAajHHe5Ky62MIzdgBP5Pa0vXOG8g7dr4eMc5Gf5wXZEyAAAADWx9dpput8CIjwx23IbrJLve7jjtVn6FBpgj0aUGm9K0AAAABvbOzznYql/rfpAYXk2smmr87FdsmsTJh9fMpa/XtbZLRMA77fhG03mdT+P/TvBUdGtMDZtL6mZ2Jro8EssmBQ</Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIwy20GgZLESH9GFnN7CznQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACZVYKY4Mgqi17OvTvCH2KAgddQYISutw4i0xuoafJrJAAAAAAOgAAAAAIAACAAAADuoUDVbgEZ1ZLeHI+MGqcwJjzMHJKUXaQUsa1JsssC9iAAAAADo2zdV6mCaZXSCR9zAM72ztJqIxKzH9nZ4AjBizKr/0AAAAC3BDSsNrHbiNPvIZHbKQP+gp0jTwW2U4JHZdQw1fMGjD2+HxIx8Dfn/t5OPqlqflvY9WLKOxVGIkuXweBuSZ/M</Password>
         </CrmConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[RAMCO-Customer]"
       DTS:CreationName="DYNAMICS-CRM"
+      DTS:DelayValidation="True"
       DTS:DTSID="{C570B595-B470-415D-8074-FC32B35967B0}"
       DTS:ObjectName="RAMCO-Customer">
       <DTS:PropertyExpression
@@ -307,13 +308,14 @@
           ConnectByProxy="False">
           <ServerPassword
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIwy20GgZLESH9GFnN7CznQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACglm2zYxZfPQ8hnBw8OhQt7e3UCuWK8xH/Z4FvTeY9CAAAAAAOgAAAAAIAACAAAACpL+i5ok2nsTp5E81x5PtNQeg8L+8MuxHxShRnTGX9ySAAAADrlTUpvZHE2vxlL6jUg6RwyhbWdW0vIa0wZv7B3KUtGkAAAAC4xBbJM8WKHafGAQiC7C+i1EbWt8rKLQ8CsLMdw+7gTaU6DP/iyPQsCJFWp8K92oUWroTuzQoyPrsaXf7wfEgK</ServerPassword>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIwy20GgZLESH9GFnN7CznQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABRN4hFSemLYvRUqUp6Ir8POmpSZBH+UrG7jyda3y1dJwAAAAAOgAAAAAIAACAAAAAsMZAYaG9pkxB9oERUDkJIcVsLYSxchkREIxQ4Nt/yPyAAAACdY9EcCsMlx9rrjPlnd9UDS6bL1RggiC+axNHkFa2rgUAAAADex9e57H7/5qM+XUHIW43i6wvgZpjYBoWwPwx6IeUzq4hrVlwCMrdKAkCVXqwQr4dCFPmwJPng2ZHfu4nurcAP</ServerPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[RAMCO-RAMCOCRM]"
       DTS:CreationName="DYNAMICS-CRM"
+      DTS:DelayValidation="True"
       DTS:DTSID="{41e11a97-5d85-4abf-b1cd-45f346f5281f}"
       DTS:ObjectName="RAMCO-RAMCOCRM">
       <DTS:ObjectData>
@@ -322,7 +324,7 @@
           ConnectByProxy="False">
           <ServerPassword
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIwy20GgZLESH9GFnN7CznQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAZB7f2WfzhS02FItNAftMitfeb0JurFb6GOU2aLrYMoQAAAAAOgAAAAAIAACAAAADqNd1v29oaYlJI/r3xURnVJQNj6erbfJdgTFsFskJQLyAAAABYO9xgRJDxQ5B6EDnUPGYaZt68jnuHhR6mKrYIqfML9kAAAAC/OpeV8148RnIaheiSeZrrM8qChN4+F0N2/IJL67f5D+NUJGbiS4M6T7phsjOA4H93bXFHV1gq9X8LmLEpd62q</ServerPassword>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIwy20GgZLESH9GFnN7CznQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACBGeTp3PNfnPh56byk3t7GIsM55AeNU8UG67fi96AGlAAAAAAOgAAAAAIAACAAAABn4wM63MgF+6H8KYpX8TOyR/U9nArrIrCVNDgnKxOlFyAAAADqs/y2LrNbZsCAztwkPfpgn5Mdd1g6THxrSEBsUEs2uEAAAABt02/+iNkQ6r/aO/xogXTEtzieYOJSZLPjllVuj8QHhRP3/7TkNFWSkwASioM5e+0IH7KLy0ODNhvdXAZ0zj6Z</ServerPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
